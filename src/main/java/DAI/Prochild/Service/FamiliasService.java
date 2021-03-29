@@ -45,9 +45,6 @@ public class FamiliasService {
         return user;
     }
 
-    public void deleteFamilias(Long id) {
-    }
-
     @Transactional
     public void updateFamilias(Long familiasId,
                                String nome,
