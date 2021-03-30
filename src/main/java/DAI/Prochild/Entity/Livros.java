@@ -20,6 +20,7 @@ public class Livros {
     private String nome;
     private String descricao;
     private String link;
+    @Column(columnDefinition = "LONGBLOB")
     private byte[] capa;
 
     public Livros() {

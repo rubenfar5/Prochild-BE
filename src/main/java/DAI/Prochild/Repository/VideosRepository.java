@@ -10,6 +10,6 @@ import java.util.Optional;
 @Repository
 public interface VideosRepository extends JpaRepository<Videos, Long> {
 
-    @Query("SELECT v FROM videos v WHERE v.nome = ?1")
+    @Query("SELECT v FROM Videos v WHERE v.nome = ?1")
     Optional<Videos> findVideosByNome(String nome);
 }

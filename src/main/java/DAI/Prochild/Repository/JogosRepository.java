@@ -10,6 +10,6 @@ import java.util.Optional;
 @Repository
 public interface JogosRepository extends JpaRepository<Jogos, Long> {
 
-    @Query("Select j FROM jogos j WHERE j.nome = ?1")
+    @Query("SELECT j FROM Jogos j WHERE j.nome = ?1")
     Optional<Jogos> findJogosByNome(String nome);
 }
