@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "prochild/users/familias")
+@CrossOrigin(maxAge = 3600)
 @AllArgsConstructor
 public class FamiliasController {
 

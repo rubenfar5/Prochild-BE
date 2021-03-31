@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>HappyChild - Jogos</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/logos/LogoApp-small.png" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top" onload="changeMainMenu()">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/logos/LogoApp.png" alt="" /></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars ml-1"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="MenuPrincipal.html"><i
+                class="fas fa-home"></i> Menu Principal</a></li>
+          <li class="nav-item" id="forumbtn"><a class="nav-link js-scroll-trigger" href="MenuForum.html"><i
+                class="fas fa-comments"></i> Fórum</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" id="direitosbtn" href="MenuDireitos.html"><i
+                class="fas fa-balance-scale"></i> Direitos das Crianças</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="MenuDiversoes.html"><i
+                class="fas fa-puzzle-piece"></i> Diversões</a></li>
+          <li class="nav-item" id="apoiosplace"><a class="nav-link js-scroll-trigger" href="MenuLinhasApoio.html"><i
+                class="fas fa-headset"></i> Ajudas</a></li>
+          <li class="nav-item" id="perfilbtn">
+            <a class="nav-link js-scroll-trigger" href="DadosPerfil.html"><i class="fas fa-user"></i>
+              Perfil</a>
+          </li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href=""><i class="fas fa-sign-out-alt"></i>
+              Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Masthead-->
+  <header class="masthead2">
+    <div class="container">
+      <div class="masthead-subheading"></div>
+      <div class="masthead2-heading text-uppercase">Jogos</div>
+      <button class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" name="btnEdit">Editar</button>
+    </div>
+  </header>
+
+  <!-- Portfolio Grid-->
+  <section class="page-section bg-light" id="portfolio">
+    <div class="container">
+      <div class="text-center">
+        <h3 class="section-subheading text-muted">
+          Nesta página, podes encontrar um conjunto de jogos que podes jogar
+          com os teus amigos ou familiares. Esperamos que te divirtas.
+        </h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="assets/img/portfolio/jogodogalo.jpg" alt="" />
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">Jogo do Galo</div>
+              <div class="portfolio-caption-subheading text-muted"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="assets/img/portfolio/jogomacaca4.jpg" alt="" />
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">Jogo da Macaca</div>
+              <div class="portfolio-caption-subheading text-muted"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="assets/img/portfolio/jogostop.jpg" alt="" />
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">Stop</div>
+              <div class="portfolio-caption-subheading text-muted"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+          <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="assets/img/portfolio/Dominos.jpg" alt="" />
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">Dómino</div>
+              <div class="portfolio-caption-subheading text-muted"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+          <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="assets/img/portfolio/EscondeEsconde.jpg" alt="" />
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">Esconde Esconde</div>
+              <div class="portfolio-caption-subheading text-muted"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="assets/img/portfolio/Mikado.jpg" alt="" />
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">Mikado</div>
+              <div class="portfolio-caption-subheading text-muted"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="portfolio">
+    <div class="container">
+      <div class="text-center">
+        <h3 class="section-subheading text-muted">
+          Aqui podes ver outras sugestões feitas pelas diferentes instituições
+        </h3>
+      </div>
+      <div align=center>
+        <button class="btn btn-primary">Adicionar</button>
+        <button class="btn btn-primary">Eliminar</button>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Portfolio Modals-->
+  <!-- Modal 1-->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <img src="assets/img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <!-- Project Details Go Here-->
+                <h2 class="text-uppercase">Jogo do Galo</h2>
+                <p class="item-intro text-muted">
+                  O "Jogo do Galo", também conhecido por três em linha, pode
+                  ser jogado com um papel e lápis por dois jogadores que
+                  alternadamente vão desenhando um X e um O numa grelha de
+                  tamanho 3 x 3. Ganha o jogador que primeiro conseguir
+                  alinhar três símbolos na vertical, na horizontal ou na
+                  diagonal.
+                </p>
+                <div class="iframe-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/YSbKz66dwVQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <br>
+                <!--<img class="img-fluid d-block mx-auto" src="assets/img/portfolio/Jogodogalo.jpg" alt="" />-->
+                <p>Instruções:</p>
+                <ul class="list-inline">
+                  <li>
+                    1º: Começa por arranjar: um lápis ou caneta; uma folha de
+                    papel
+                  </li>
+                  <li>2º: Desenha uma grelha #</li>
+                  <li>
+                    3º: Escolhe com que simbolo vais jogar (X ou O) e começa o
+                    jogo
+                  </li>
+                </ul>
+                <!--<a class="btn" href="https://www.youtube.com/watch?v=YSbKz66dwVQ" style="color: red"><i
+                    class="fab fa-youtube"></i></a>-->
+                <p></p>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times mr-1"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 2-->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <img src="assets/img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <!-- Project Details Go Here-->
+                <h2 class="text-uppercase">Jogo da Macaca</h2>
+                <p class="item-intro text-muted">
+                  O jogo tradicional da macaca, também conhecido como jogo do
+                  pé coxinho, remonta ao tempo das nossas avós. Este jogo
+                  tradicional pode ser jogado com apenas duas crianças. Ideal
+                  para o ar livre, por exemplo, jardim ou recreio.
+                </p>
+                <p class="item-intro text-muted">
+                  Material: espaço amplo, desenho de macaca e uma patela para
+                  cada jogador (por exemplo uma pequena pedra).
+                </p>
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/jogomacaca2.png" alt="" />
+                <p>Instruções:</p>
+                <ul class="list-inline">
+                  <li>1º: Desenhar a macaca</li>
+                  <li>2º: Começa a diversão</li>
+                </ul>
+                <p>Regras:</p>
+                <ul class="list-inline">
+                  <li>
+                    Para jogar, a criança atira a patela para a primeira casa
+                    e desloca-se até lá ao pé-coxinho apanhando a mesma e
+                    voltando para trás;
+                  </li>
+                  <li>
+                    Efectua o mesmo processo até chegar ao último patamar;
+                  </li>
+                  <li>
+                    Na casa 4 e 5 e 7 e 8 os dois pés devem ser colocados em
+                    simultâneo;
+                  </li>
+                  <li>
+                    Depois de saltar as últimas casas é necessário efectuar o
+                    percurso contrário.
+                  </li>
+                </ul>
+
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times mr-1"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 3-->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <img src="assets/img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <!-- Project Details Go Here-->
+                <h2 class="text-uppercase">Jogo Stop</h2>
+                <p class="item-intro text-muted">
+                  O jogo do stop garante momentos divertidos com os amigos e
+                  em família.
+                </p>
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/jogostop.jpg" alt="" />
+                <p>Instruções:</p>
+                <ul class="list-inline">
+                  <li>
+                    1º: Começa por arranjar uma folha e uma caneta ou lápis
+                  </li>
+                </ul>
+                <p>Regras:</p>
+                <ul class="list-inline">
+                  <li>
+                    1º: Cada jogador deve escrever numa folha as várias
+                    categorias que pretendem testar, como por exemplo, nomes,
+                    países, cidades, frutos, animais objetos, entre outros
+                  </li>
+                  <li>
+                    2º: Um jogador deve dizer o abecedário em silêncio, ao
+                    passo que o outro o manda parar, ao dizer “stop”
+                  </li>
+                  <li>
+                    3º: A letra sorteada é aquela pela qual todas as
+                    categorias anteriormente definidas devem começar
+                  </li>
+                  <li>
+                    4º: De seguida, todos os jogadores devem preencher todas
+                    as colunas o mais rápido possível e o primeiro a terminar
+                    deve dizer novamente “stop”
+                  </li>
+                  <li>
+                    5º: Após algum jogador dizer stop, os participantes
+                    começam a dizer as palavras para cada categoria:
+                  </li>
+                  <li>
+                    Se mais algum participante tiver a mesma palavra, ganham 5
+                    pontos;
+                  </li>
+                  <li>
+                    Se nenhum dos participante tiver a mesma palavra, ganham
+                    10 pontos;
+                  </li>
+                  <li>
+                    Se forem o unico jogador a preencher uma categoria, ganham
+                    15 pontos;
+                  </li>
+                </ul>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times mr-1"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 4-->
+  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <img src="assets/img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <!-- Project Details Go Here-->
+                <h2 class="text-uppercase">Domino</h2>
+                <p class="item-intro text-muted">
+                  Este é um jogo ótimo para se jogar em família.
+                </p>
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/Dominos.jpg" alt="" />
+                <p>Instruções:</p>
+                <ul class="list-inline">
+                  <li>
+                    Existem varias variantes do jogo. A forma que
+                    habitualmente é jogada consiste em 4 jogadores. As peças
+                    sao embaralhadas na mesa, e cada jogador pega em 7 peças.
+                    O jogador com a peça 6-6 começa a partida, depois o
+                    proximo jogador é o jogador à direita. O jogo acaba quando
+                    um jogador fica sem peças.
+                  </li>
+                </ul>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times mr-1"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 5-->
+  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <img src="assets/img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <!-- Project Details Go Here-->
+                <h2 class="text-uppercase">Esconde Esconde</h2>
+                <p class="item-intro text-muted">
+                  Esconde-esconde ou escondidas é uma brincadeira infantil,
+                  onde nao ha limite de pessoas para brincar. Esta brincadeira
+                  consiste em uma pessoa fica com os olhos fechados a contar
+                  até um certo número combinado com os participantes, os
+                  restantes participantes vão se esconder
+                </p>
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/EscondeEsconde.jpg" alt="" />
+                <p>Instruções:</p>
+                <ul class="list-inline">
+                  <li>
+                    -Escolher quem vai contar, essa pessoa irá procurar os
+                    restantes;
+                  </li>
+                  <li>-Definir ate quanto é que vai ser a contagem;</li>
+                  <li>
+                    -Quando o participante que vai procurar, começa a contar
+                    os outros elementos procuram onde se esconder;
+                  </li>
+                  <li>
+                    -Quando acabar a contagem, o elemento que vai procurar
+                    pode começar a procura dos restantes elementos;
+                  </li>
+                  <li>
+                    -Ganha o elemento que for o ultimo a ser encontrado;
+                  </li>
+                </ul>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times mr-1"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 6-->
+  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <img src="assets/img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <!-- Project Details Go Here-->
+                <h2 class="text-uppercase">Mikado</h2>
+                <p class="item-intro text-muted">
+                  Este jogo é muito simples de jogar e depende do modelo,
+                  alguns pauzinhos sao diferentes dos outros mas a ideia é a
+                  mesma.
+                </p>
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/Mikado.jpg" alt="" />
+                <p>Instruções:</p>
+                <ul class="list-inline">
+                  <li>
+                    1º: Um jogador pega nos pauzinhos na vertical, com uma mão
+                    e deixa-os cair sobre a mesa.
+                  </li>
+                  <li>
+                    2º: O jogador seguinte, tenta retirar os que conseguir sem
+                    mover os outros pauzinhos. Se mover algum perde a vez.
+                  </li>
+                  <li>
+                    3º: No final da partida conta-se a pontuação de cada
+                    jogador.
+                  </li>
+                </ul>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times mr-1"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------------------------>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Third party plugin JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <!-- Contact form JS-->
+  <script src="assets/mail/jqBootstrapValidation.js"></script>
+  <script src="assets/mail/contact_me.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

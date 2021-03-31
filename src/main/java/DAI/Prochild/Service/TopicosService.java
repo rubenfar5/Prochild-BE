@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@AllArgsConstructor
 public class TopicosService {
 
     private final TopicosRepository topicosRepository;
