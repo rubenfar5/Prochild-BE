@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>HappyChild - Livros</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/logos/LogoApp-small.png" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top" onload="changeMainMenu()">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/logos/LogoApp.png" alt="" /></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars ml-1"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="MenuPrincipal.html"><i
+                class="fas fa-home"></i> Menu Principal</a></li>
+          <li class="nav-item" id="forumbtn"><a class="nav-link js-scroll-trigger" href="MenuForum.html"><i
+                class="fas fa-comments"></i> Fórum</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" id="direitosbtn" href="MenuDireitos.html"><i
+                class="fas fa-balance-scale"></i> Direitos das Crianças</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="MenuDiversoes.html"><i
+                class="fas fa-puzzle-piece"></i> Diversões</a></li>
+          <li class="nav-item" id="apoiosplace"><a class="nav-link js-scroll-trigger" href="MenuLinhasApoio.html"><i
+                class="fas fa-headset"></i> Ajudas</a></li>
+          <li class="nav-item" id="perfilbtn">
+            <a class="nav-link js-scroll-trigger" href="DadosPerfil.html"><i class="fas fa-user"></i>
+              Perfil</a>
+          </li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href=""><i class="fas fa-sign-out-alt"></i>
+              Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Masthead-->
+  <header class="masthead3">
+    <div class="container">
+      <div class="masthead-subheading"></div>
+      <div class="masthead3-heading text-uppercase">Livros</div>
+      <button class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" name="btnEdit">Editar</button>
+    </div>
+  </header>
+  <!-- Portfolio Grid-->
+  <section class="page-section bg-light" id="portfolio">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase"></h2>
+        <h3 class="section-subheading text-muted">
+          Nesta página, podes encontrar um conjunto de sugestões de livros para passar um bom tempo em família e
+          aproveitar para desenvolver as tuas capacidades de leitura.
+        </h3>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="assets/img/portfolio/jujuagota.jpg" alt="" />
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">Juju a Gota</div>
+              <a class="btn btn-primary" href="assets/uploads/JujuAGota.pdf" download="Juju a Gota"><i
+                  class="fas fa-arrow-circle-down"></i></a>
+              <div class="portfolio-caption-subheading text-muted"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="assets/img/portfolio/amaromar.jpg" alt="" />
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">Amar o Mar</div>
+              <a class="btn btn-primary" href="assets/uploads/AmarOMAr.pdf" download="Amar o Mar"><i
+                  class="fas fa-arrow-circle-down"></i></a>
+              <div class="portfolio-caption-subheading text-muted"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="assets/img/portfolio/a-galinha-que-sabia-ler-1.jpg" alt="" />
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">A Galinha que sabia ler</div>
+              <a class="btn btn-primary" href="assets/uploads/A_galinha_que_sabia_ler_web.pdf"
+                download="A Galinha que sabia ler"><i class="fas fa-arrow-circle-down"></i></a>
+              <div class="portfolio-caption-subheading text-muted"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+          <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="assets/img/portfolio/patinhofeiojpg.jpg" alt="" />
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">Patinho Feio</div>
+              <a class="btn btn-primary" href="assets/uploads/patinhofeio.pdf" download="Patinho Feio"><i
+                  class="fas fa-arrow-circle-down"></i></a>
+              <div class="portfolio-caption-subheading text-muted"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+          <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="assets/img/portfolio/Ameninadasestrelas.jpg" alt="" />
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">A menina das estrelas</div>
+              <a class="btn btn-primary" href="assets/uploads/a-menina-das-estrelas.pdf"
+                download="A menina das estrelas"><i class="fas fa-arrow-circle-down"></i></a>
+              <div class="portfolio-caption-subheading text-muted"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="assets/img/portfolio/tresporquinhos.jpg" alt="" />
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">Os três porquinhos</div>
+              <a class="btn btn-primary" href="assets/uploads/OsTresPorquinhos.pdf" download="Os Três Porquinhos"><i
+                  class="fas fa-arrow-circle-down"></i></a>
+              <div class="portfolio-caption-subheading text-muted"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="portfolio" hidden>
+    <div class="container">
+      <div class="text-center">
+        <h3 class="section-subheading text-muted">
+          Aqui podes ver outras sugestões feitas pelas diferentes instituições
+        </h3>
+      </div>
+      <div align=center>
+        <button class="btn btn-primary" name="btnAdd">Adicionar</button>
+        <button class="btn btn-primary" name="btnDelete">Eliminar</button>
+      </div>
+    </div>
+  </section>
+  <!-- Portfolio Modals-->
+  <!-- Modal 1-->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <img src="assets/img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <!-- Project Details Go Here-->
+                <h2 class="text-uppercase">Juju vai viajar</h2>
+                <p class="item-intro text-muted">
+                  Juju vivia no lago caramelo, junto com milhares de outras gotinhas… como podem ver, ela é uma gota
+                  d’água super charmosinha. Viver no lago era divertido e Juju estava acostumada a toda aquela agitação.
+                  Sapos, peixinhos, patinhos…
+                </p>
+                <!--<img class="img-fluid d-block mx-auto" src="assets/img/portfolio/jujuagota.jpg" alt="" />-->
+                <div class="iframe-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/4i8yqVyoVY4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <!--<a class="btn" href="https://www.youtube.com/watch?v=4i8yqVyoVY4" style="color: red"><i class="fab fa-youtube"></i></a>-->
+                <p></p>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times mr-1"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 2-->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <img src="assets/img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <!-- Project Details Go Here-->
+                <h2 class="text-uppercase">Amar o Mar</h2>
+                <p class="item-intro text-muted">O mar e seus encantos…
+                  Belezas em todos os cantos.
+                  De tanto admirar, fiquei a pensar:
+                  “como devo amar o mar?”</p>
+                <div class="iframe-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/-LauD3-_W9c"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <!--<img class="img-fluid d-block mx-auto" src="assets/img/portfolio/amaromar.jpg" alt="" />
+                <a class="btn" href="https://www.youtube.com/watch?v=Ppyz4cLv-rk" style="color: red"><i class="fab fa-youtube"></i></a>-->
+                <p></p>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times mr-1"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 3-->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <img src="assets/img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <!-- Project Details Go Here-->
+                <h2 class="text-uppercase">A galinha que sabia ler</h2>
+                <p class="item-intro text-muted">
+                  Galinha criada em uma chácara fica amiga dos livros de seu dono e acaba aprendendo a ler. Ao conhecer
+                  a história da Galinha dos Ovos de Ouro, decide mudar seu final. Seus amigos livros mostram a ela que a
+                  própria natureza também é uma galinha dos ovos de ouro.
+                </p>
+                <div class="iframe-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/TOp8VhTbwn8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <!--<img class="img-fluid d-block mx-auto" src="assets/img/portfolio/a-galinha-que-sabia-ler-1.jpg" alt="" />
+                <a class="btn" href="https://www.youtube.com/watch?v=TOp8VhTbwn8" style="color: red"><i class="fab fa-youtube"></i></a>-->
+                <p></p>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times mr-1"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 4-->
+  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <img src="assets/img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <!-- Project Details Go Here-->
+                <h2 class="text-uppercase">Patinho feio</h2>
+                <p class="item-intro text-muted">
+                  Não existe na literatura universal obra que tenha sido tão adaptada, reescrita e transcrita como os
+                  Contos de Andersen, publicados em novembro de 1843. Entre eles está O patinho feio, uma das histórias
+                  mais conhecidas do mundo, que, de geração em geração, faz sempre o mesmo sucesso.
+                </p>
+                <div class="iframe-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/0LLZEvXP4KQ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <!--<img class="img-fluid d-block mx-auto" src="assets/img/portfolio/patinhofeiojpg.jpg" alt="" />
+                <a class="btn" href="https://www.youtube.com/watch?v=ph3Q8bs3ny8" style="color: red"><i class="fab fa-youtube"></i></a>-->
+                <p></p>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times mr-1"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 5-->
+  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <img src="assets/img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <!-- Project Details Go Here-->
+                <h2 class="text-uppercase">A menina das estrelas</h2>
+                <p class="item-intro text-muted">
+
+                </p>
+                <div class="iframe-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/wf918eYPux8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <!--<img class="img-fluid d-block mx-auto" src="assets/img/portfolio/ameninadaestrelas.jpg" alt="" />
+                <a class="btn" href="https://www.youtube.com/watch?v=Q9M1xkiTLgo" style="color: red"><i class="fab fa-youtube"></i></a>-->
+                <p></p>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times mr-1"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal 6-->
+  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <img src="assets/img/close-icon.svg" alt="Close modal" />
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <!-- Project Details Go Here-->
+                <h2 class="text-uppercase">Os três Porquinhos</h2>
+                <p class="item-intro text-muted">
+                  Os três porquinhos resolveram sair de casa e construir cada um a sua moradia. Mas aí veio o Lobo Mau e
+                  com seu forte assopro destruiu tudo! Descubra o que vai acontecer com os irmãos e o Lobo.
+                </p>
+                <div class="iframe-container">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/lQ0DBez2Lx4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <!--<img class="img-fluid d-block mx-auto" src="assets/img/portfolio/tresporquinhos.jpg" alt="" />
+                <a class="btn" href="https://www.youtube.com/watch?v=lQ0DBez2Lx4" style="color: red"><i class="fab fa-youtube"></i></a>-->
+                <p></p>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fas fa-times mr-1"></i>
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------------------------------------------------------------------------------------------------------------------------>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Third party plugin JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <!-- Contact form JS-->
+  <script src="assets/mail/jqBootstrapValidation.js"></script>
+  <script src="assets/mail/contact_me.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+  <!--<script src="js/fetch.js"></script>-->
+</body>
+
+</html>

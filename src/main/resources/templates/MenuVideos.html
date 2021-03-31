@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>HappyChild - Vídeos</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/logos/LogoApp-small.png" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top" onload="changeMainMenu(); showVideos()">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/logos/LogoApp.png" alt="" /></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars ml-1"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="MenuPrincipal.html"><i
+                class="fas fa-home"></i> Menu Principal</a></li>
+          <li class="nav-item" id="forumbtn"><a class="nav-link js-scroll-trigger" href="MenuForum.html"><i
+                class="fas fa-comments"></i> Fórum</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" id="direitosbtn" href="MenuDireitos.html"><i
+                class="fas fa-balance-scale"></i> Direitos das Crianças</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="MenuDiversoes.html"><i
+                class="fas fa-puzzle-piece"></i> Diversões</a></li>
+          <li class="nav-item" id="apoiosplace"><a class="nav-link js-scroll-trigger" href="MenuLinhasApoio.html"><i
+                class="fas fa-headset"></i> Ajudas</a></li>
+          <li class="nav-item" id="perfilbtn">
+            <a class="nav-link js-scroll-trigger" href="DadosPerfil.html"><i class="fas fa-user"></i>
+              Perfil</a>
+          </li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href=""><i class="fas fa-sign-out-alt"></i>
+              Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Masthead-->
+  <header class="masthead5">
+    <div class="container">
+      <div class="masthead5-heading text-uppercase">Vídeos</div>
+      <button class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" name="btnEdit">Editar</button>
+
+    </div>
+  </header>
+
+  <!--Descrição-->
+  <section class="page-section bg-light">
+    <div class="container">
+      <div class="text-center">
+        <h3 class="section-subheading text-muted">
+          Nesta página, podes encontrar um conjunto de vídeos educativos para te divertires e aprenderes. Tens vários
+          tipos de videos para assistir aqui na app, ou se quiseres, podes aceder diretamente ao youtube e continuar la
+          a ver os restantes vídeos.
+        </h3>
+        <h4>Categorias</h4> <br>
+        <a href="#contosdefadas" class="btn btn-primary fundo-azulescuro" style="color:black">Contos de Fadas</a>
+        <a href="#linguas" class="btn btn-primary fundo-azul" style="color:black">Línguas</a>
+        <a href="#diversos" class="btn btn-primary fundo-magenta" style="color:black">Diversos</a>
+        <a href="#games" class="btn btn-primary fundo-amarelo" style="color:black">Gameplays</a>
+      </div>
+    </div>
+  </section>
+  <br>
+  <!------------------------------------------------Contos de fadas------------------------------------------------------------------------>
+  <section class="page-section" id="contosdefadas">
+
+    <div class="container">
+
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase letra-AzulEscura">Contos de Fadas</h2>
+      </div>
+
+      <br>
+
+      <div class="row text-center justify-content-md-center" id="fairyTails">
+
+        <!--div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>O Gato das Botas</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Kymxpr32uVQ"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>O Feiticeiro de Oz</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PL_ZU0xcqi8"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>O livro da Selva</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/uxcrfaD3yq0"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>Os três Porquinhos</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YQKM5T4X0kM"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>O príncipe sapo</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_Xv3suV-PZQ"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>Patinho Feio</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0LLZEvXP4KQ"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="">
+          <button class="btn btn-primary" name="btnAdd">Adicionar</button>
+          <button class="btn btn-primary" name="btnDelete">Eliminar</button>
+        </div>
+      </div-->
+
+    </div>
+
+  </section>
+  <!---------------------------------------------------------------------------------------------------------------------------------------->
+  <section class="page-section bg-light" id="linguas">
+
+    <div class="container">
+
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase letra-azul">Línguas</h2>
+      </div> <br>
+
+      <div class="row text-center justify-content-md-center" id="languages">
+
+        <!--div class="col-lg-4 col-md-6 mb-4 justify-content-md-center" >
+          <p>Números em Inglês</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DR-cfDsHCGA"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>Cores em Inglês</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ybt2jhCQ3lA"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>Animais Basicas em Inglês</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/v5aVK0APPkU"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>Números em Francês</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Q2CNDJysSu8"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>Cores em Francês</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DAjssWEquzM"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>Animais em Francês</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hx6BJ9j1B3M"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="">
+          <button class="btn btn-primary" name="btnAdd">Adicionar</button>
+          <button class="btn btn-primary" name="btnDelete">Eliminar</button>
+        </div>
+      </div-->
+    </div>
+  </section>
+  <!------------------------------------------------------------------------------------------------------------------------------------>
+  <section class="page-section" id="diversos">
+
+    <div class="container">
+
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase letra-magenta">Diversos</h2>
+      </div> <br>
+
+      <div class="row text-center justify-content-md-center" id="diverse">
+
+        <!--div class="col-lg-4 col-md-6 mb-4 justify-content-md-center" >
+          <p>Lady bug</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/g1knSkH-Swg"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>Mickey Mouse</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RGImJxsnjX8"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>Nody</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZCNlQv6pyDg"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>Bob Construtor</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9MIQcDdDk7I"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>Marsha e o Urso</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yntso82TPO8"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>Patrulha Pata</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kE1lxvGFlnM"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="">
+          <button class="btn btn-primary" name="btnAdd">Adicionar</button>
+          <button class="btn btn-primary" name="btnDelete">Eliminar</button>
+        </div>
+      </div-->
+    </div>
+  </section>
+  <!---------------------------------------------------GamePlays--------------------------------------------------------------------------------->
+  <section class="page-section bg-light" id="games">
+
+    <div class="container">
+
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase letra-amarela">Gameplays</h2>
+      </div> <br>
+
+      <div class="row text-center justify-content-md-center" id="gameplays">
+
+        <!---div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>RicFazeres-Homem Aranha</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0Ltse-yfne0"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>RicFazeres-Subnáutica</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8iWlhYexIUo"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>RicFazeres-FIFA</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EtjHxuZ8a1s"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>Feromonas-Minecraft</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JR0Xk8iW_aE"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>Feromonas-Minecraft</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/u-nQ93vDT5c"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+          <p>Sea3po-AmongUs</p>
+          <div class="iframe-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HVlIMDm64MQ"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="">
+          <button class="btn btn-primary" name="btnAdd">Adicionar</button>
+          <button class="btn btn-primary" name="btnDelete">Eliminar</button>
+        </div>
+      </div-->
+    </div>
+  </section>
+
+  <!------------------------------------------------------------------------------------------------------------------------------------>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Third party plugin JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <!-- Contact form JS-->
+  <script src="assets/mail/jqBootstrapValidation.js"></script>
+  <script src="assets/mail/contact_me.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+  <script src="js/videos.js"></script>
+</body>
+
+</html>

@@ -11,9 +11,6 @@ import java.util.Optional;
 @Repository
 public interface TopicosRepository extends JpaRepository<Topicos, Long> {
 
-    @Query("SELECT t FROM Topicos t WHERE t.id = ?1")
-    Optional<Topicos> findTopicosById(Long id);
-
     @Query("SELECT t FROM Topicos t WHERE t.nome = ?1")
     Optional<Topicos> findTopicosByNome(String nome);
 }

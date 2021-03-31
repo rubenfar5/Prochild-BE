@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>HappyChild - Fórum</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/logos/LogoApp-small.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top" onload="changeMainMenu()">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/logos/LogoApp.png"
+                    alt="" /></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ml-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="MenuPrincipal.html"><i
+                        class="fas fa-home"></i> Menu Principal</a></li>
+                  <li class="nav-item" id="forumbtn"><a class="nav-link js-scroll-trigger" href="MenuForum.html"><i
+                        class="fas fa-comments"></i> Fórum</a></li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" id="direitosbtn" href="MenuDireitos.html"><i
+                        class="fas fa-balance-scale"></i> Direitos das Crianças</a></li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href="MenuDiversoes.html"><i
+                        class="fas fa-puzzle-piece"></i> Diversões</a></li>
+                  <li class="nav-item" id="apoiosplace"><a class="nav-link js-scroll-trigger" href="MenuLinhasApoio.html"><i
+                        class="fas fa-headset"></i> Ajudas</a></li>
+                  <li class="nav-item" id="perfilbtn">
+                    <a class="nav-link js-scroll-trigger" href="DadosPerfil.html"><i class="fas fa-user"></i>
+                      Perfil</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link js-scroll-trigger" href=""><i class="fas fa-sign-out-alt"></i>
+                      Logout</a></li>
+                </ul>
+              </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead9">
+        <div class="container">
+            <div class="masthead9-heading">Fórum</div>
+            <!--<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Saber mais</a>-->
+        </div>
+    </header>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 fundo-forum forumMargin">
+                <a href="#">Tópicos</a>
+                <!-- <i class="fa fa-chevron-circle-right pagination-arrow"></i> <a
+                    href="#">Discussão</a> -->
+            </div>
+        </div>
+        <div id="topico_1" class="row categoryModule forumMargin">
+            <!-- produzir esta função! -->
+            <a href="#" onclick="showDiscussions(1);">
+                <div class="col-lg-12 columnPad">
+                    <div class="pullLeft">
+                        <h1>Discussão</h1>
+                    </div>
+                    <div class="pullRight">
+                        <a id="startDiscussion_1" class="btn btn-primary themeButton" href="#"
+                            onclick="StartDiscussion(1);">Criar Discussão</a>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div id="cat_new_discussion_1" clas="row forumPad" style="display: none;">
+            <div class="col-lg-12">
+                <form>
+                    <div class="form-group">
+                        Título
+                        <input type="text" name="novaDiscussao" class="form-control" size="40"></input>
+                        <br>
+                        Descrição
+                        <textarea class="newDiscussionText form-control" name="novaDiscussaoTexto" rows="5"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- classs forun-fundo diferente-->
+        <div id="discussao_1" class="row fundo-forum forumPad" style="display: none;">
+            <table class="forumTable">
+                <thead>
+                    <th>
+                        Discussão
+                    </th>
+                    <th>
+                        Autor
+                    </th>
+                    <th class="pullRight">
+                        Respostas
+                    </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="#"> Nome da discussão </a>
+                        </td>
+                        <td>
+                            <a href="#">Ruben </a>
+                        </td>
+                        <td class="pullRight">
+                            10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#"> Nome da discussão </a>
+                        </td>
+                        <td>
+                            <a href="#">Ruben </a>
+                        </td>
+                        <td class="pullRight">
+                            10
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="pullRight" style="padding-right: 15px">
+                        <a class="label label-primary" href="#"> Ver mais </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="topico_2" class="row categoryModule forumMargin">
+            <!-- produzir esta função! -->
+            <a href="#" onclick="showDiscussions(2);">
+                <div class="col-lg-12 columnPad">
+                    <div class="pullLeft">
+                        <h1>Discussão</h1>
+                    </div>
+                    <div class="pullRight">
+                        <a id="startDiscussion_2" class="btn btn-primary themeButton" href="#"
+                            onclick="StartDiscussion(2);">Criar Discussão</a>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div id="cat_new_discussion_2" clas="row forumPad" style="display: none;">
+            <div class="col-lg-12">
+                <form>
+                    <div class="form-group">
+                        Título
+                        <input type="text" name="novaDiscussao" class="form-control" size="40"></input>
+                        <br>
+                        Descrição
+                        <textarea class="newDiscussionText form-control" name="novaDiscussaoTexto" rows="5"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- classs forun-fundo diferente-->
+        <div id="discussao_2" class="row fundo-forum forumPad" style="display: none;">
+            <table class="forumTable">
+                <thead>
+                    <th>
+                        Discussão
+                    </th>
+                    <th>
+                        Autor
+                    </th>
+                    <th class="pullRight">
+                        Respostas
+                    </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="#"> Nome da discussão </a>
+                        </td>
+                        <td>
+                            <a href="#">Ruben </a>
+                        </td>
+                        <td class="pullRight">
+                            10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#"> Nome da discussão </a>
+                        </td>
+                        <td>
+                            <a href="#">Ruben </a>
+                        </td>
+                        <td class="pullRight">
+                            10
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="pullRight" style="padding-right: 15px">
+                        <a class="label label-primary" href="#"> Ver mais </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+</body>
+
+
+<!-- Passar para uma pasta JVS -->
+<script>
+    function showDiscussions(discussao_id) {
+        var html_id = "#discussao_" + discussao_id;
+        if ($(html_id).css("display") == "block") {
+            $(html_id).css("display", "none");
+        } else {
+            $(html_id).css("display", "block");
+        }
+    }
+</script>
+
+<script>
+    function StartDiscussion(discussao_id) {
+        var html_id = "#cat_new_discussion_" + discussao_id;
+        var button_id = "#startDiscussion_" + discussao_id;
+        if ($(html_id).css("display") == "block") {
+            $(html_id).css("display", "none");
+            $(button_id).text("Criar Discussão");
+        } else {
+            $(html_id).css("display", "block");
+            $(button_id).text("Cancelar");
+        }
+    }
+</script>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+<!-- Bootstrap core JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<!-- Contact form JS-->
+<script src="assets/mail/jqBootstrapValidation.js"></script>
+<script src="assets/mail/contact_me.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+
+</html>

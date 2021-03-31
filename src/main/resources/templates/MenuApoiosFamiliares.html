@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>HappyChild - Apoios Familiares</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/logos/LogoApp-small.png" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body onload="changeMainMenu()">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/logos/LogoApp.png" alt="" /></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars ml-1"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="MenuPrincipal.html"><i
+                class="fas fa-home"></i> Menu Principal</a></li>
+          <li class="nav-item" id="forumbtn"><a class="nav-link js-scroll-trigger" href="MenuForum.html"><i
+                class="fas fa-comments"></i> Fórum</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" id="direitosbtn" href="MenuDireitos.html"><i
+                class="fas fa-balance-scale"></i> Direitos das Crianças</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="MenuDiversoes.html"><i
+                class="fas fa-puzzle-piece"></i> Diversões</a></li>
+          <li class="nav-item" id="apoiosplace"><a class="nav-link js-scroll-trigger" href="MenuLinhasApoio.html"><i
+                class="fas fa-headset"></i> Ajudas</a></li>
+          <li class="nav-item" id="perfilbtn">
+            <a class="nav-link js-scroll-trigger" href="DadosPerfil.html"><i class="fas fa-user"></i>
+              Perfil</a>
+          </li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href=""><i class="fas fa-sign-out-alt"></i>
+              Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Masthead-->
+  <header class="masthead10">
+    <div class="container">
+      <div class="masthead10-heading text-uppercase">Apoios Familiares</div>
+    </div>
+  </header>
+  <div class="container">
+    
+    <br />
+  
+    <!-- Page Features -->
+    <div class="row text-center justify-content-center" id="page-top">
+      
+      <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+        <div class="card h-100 border-magenta fundo-magenta shadow rounded">
+          <div class="card-body align-items-center d-flex justify-content-center">
+            <a href="#Divorcio" class="stretched-link"></a>
+            <h1 style="font-size: 30px;" class="letra-magenta">Separação/Divórcio e guarda dos filhos</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+        <div class="card h-100 border-amarelo fundo-amarelo shadow rounded">
+          <div class="card-body align-items-center d-flex justify-content-center">
+            <a href="#Adocao" class="stretched-link"></a>
+            <h1 style="font-size: 30px;" class="letra-amarela">Adoção</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+        <div class="card h-100 border-azul fundo-azul shadow rounded">
+          <div class="card-body align-items-center d-flex justify-content-center">
+            <a href="#Deveres" class="stretched-link"></a>
+            <h1 style="font-size: 30px;" class="letra-azul">Responsabilidades e deveres parentais</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+        <div class="card h-100 border-magenta fundo-magenta shadow rounded">
+          <div class="card-body align-items-center d-flex justify-content-center">
+            <a href="#Educacao" class="stretched-link"></a>
+            <h1 style="font-size: 30px;" class="letra-magenta">Educação</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
+        <div class="card h-100 border-amarelo fundo-amarelo shadow rounded">
+          <div class="card-body align-items-center d-flex justify-content-center">
+            <a href="#Equilibrio" class="stretched-link"></a>
+            <h1 style="font-size: 30px;" class="letra-amarela">Equilíbrio família-trabalho</h1>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+<!-------------------------------------Secção separação-------------------------->
+
+    <section id="Divorcio" style="text-align:justify; text-justify: inter-word;">
+      <br>
+      <hr>
+      <br>
+      <br>
+      <h2 class="letra-magenta">Separação/Divórcio e guarda dos filhos</h2>
+      <br>
+      <p>Quando alguma coisa não corre bem, o papel da família é muito importante. Os pais e as mães, em especial, devem
+        ter a capacidade de manter um ambiente sereno, em que os filhos se sintam amados e protegidos. Para isso, é
+        importante que saibam o que fazer em caso de crise e que conheçam os apoios com que podem contar. <br><br>
+        Se o casal deixar de ter condições para uma vida em comum, deve proteger a criança e garantir que os seus
+        interesses são salvaguardados. Por isso, é necessário tomar decisões importantes sobre o futuro, nomeadamente:
+      </p>
+      <ul>
+        <li>Quem fica com a responsabilidade parental?</li>
+        <li>Com quem vai viver a criança?</li>
+        <li>Qual o valor da pensão de alimentos da criança?</li>
+      </ul>
+      <br>
+      <h5>Separação amigável</h5>
+      <p>Se ambos os pais concordarem, podem recorrer a um mediador para os ajudar a chegar a um acordo sobre os vários
+        aspetos da separação ou divórcio, incluindo as responsabilidades face aos filhos.
+        O processo dura cerca de 2 meses e custa, no máximo, 50€ por pessoa. (Para mais informações, ligue 808 262 000)
+        <br><br>
+      <h5>Quando recorrer aos tribunais</h5>
+      Se os pais não conseguirem chegar a um acordo, terão de recorrer aos tribunais.
+      </p>
+      <ul>
+        <li>O tribunal determinará a residência do filho e os direitos de visita de acordo com o interesse deste, tendo
+          em atenção todas as circunstâncias relevantes, designadamente o eventual acordo dos pais e a disponibilidade
+          manifestada por cada um deles para promover relações habituais do filho com o outro.</li>
+        <li>O tribunal decidirá sempre de harmonia com o interesse do menor, incluindo o de manter uma relação de grande
+          proximidade com os dois progenitores, promovendo e aceitando acordos ou tomando decisões que favoreçam amplas
+          oportunidades de contacto com ambos e de partilha de responsabilidades entre eles.</li>
+      </ul>
+      <br>
+      <p>Para informações oficiais e mais detalhadas, <a
+          href="https://e-justice.europa.eu/content_parental_responsibility-302-pt-pt.do?member=1">clique aqui</a>.</p>
+
+
+    </section>
+<!-------------------------------------Secção Adoção-------------------------->
+    <section id="Adocao" style="text-align:justify; text-justify: inter-word;">
+
+      <br>
+      <hr>
+      <br>
+      <br>
+      <h2 class="letra-amarela">Adoção</h2>
+      <br>
+      <h5>Quem pode adotar uma criança?</h5>
+      <ul>
+        <li>Um casal de portuguesas/es ou estrangeiras/os, do mesmo sexo ou de sexos diferentes, que vivam em Portugal e
+          sejam casadas/os ou vivam em união de facto há mais de 4 anos e em que ambos tenham entre 25 e 61 anos;</li>
+        <li>Uma pessoa que pode ser solteira, casada, viúva ou viver em união de facto, entre 30 e 61 anos, ou a partir
+          dos 25 anos se a criança adotada for filha do marido ou esposa;</li>
+        <li>Uma pessoa com mais de 60 anos só pode adotar se a criança lhe tiver sido confiada antes do adotante fazer
+          61 anos ou for filho/a da pessoa com quem é casado/a;</li>
+        <li>A diferença de idades entre a/o adotante e a/o adotada/o não deve ser superior a 50 anos (salvo situações
+          especiais).</li>
+      </ul>
+      <br>
+      <h5>Onde se pode adotar uma criança?</h5>
+      <ul>
+        <li>Centro Distrital de Segurança Social da zona onde vive;</li>
+        <li>Santa Casa da Misericórdia de Lisboa, se residir nesta cidade;</li>
+        <li>Instituto de Segurança Social dos Açores, se residir na Região Autónoma dos Açores;</li>
+        <li>Instituto de Segurança Social da Madeira, se residir na Região Autónoma da Madeira.</li>
+      </ul>
+      <br>
+      <h5>Documentos e requisitos necessários para adotar uma criança</h5>
+      <ul>
+        <li>Formulários fornecidos na 1ª sessão de formação para a adoção.</li>
+      </ul>
+      <br>
+      <h6>Documentos necessários dos/as candidatos/as a adotantes:</h6>
+      <ul>
+        <li>Certidão de nascimento atualizada;</li>
+        <li>Documento de identificação válido;</li>
+        <li>Atestado da Junta de Freguesia, se viver em união de facto;</li>
+        <li>Certificado de registo criminal para efeitos de adoção;</li>
+        <li>Comprovativo de residência habitual;</li>
+        <li>Formulário de declaração médica a preencher pelo seu médico;</li>
+        <li>Fotocópia da última declaração de IRS ou os recibos das remunerações que recebe;</li>
+        <li>Número de identificação da Segurança Social (NISS), se não apresentar o Cartão de Cidadão.</li>
+      </ul>
+      <br>
+      <h6>Documentos necessários para cidadãos estrangeiros a residir em Portugal:</h6>
+      <ul>
+        <li>Certificado de legislação em matéria de adoção do país de que são nacionais;</li>
+        <li>Certificado de registo criminal para efeitos de adoção, emitido pelas autoridades do país da sua
+          nacionalidade.</li>
+      </ul>
+      <br>
+      <h5>Custos do processo de adoção</h5>
+      <p>A preparação, avaliação, seleção e acompanhamento das/dos candidatos e da família adotiva são gratuitas. <br>
+        Ficam a cargo das/os candidatas/os as despesas com:
+      </p>
+      <ul>
+        <li>As viagens ou alojamento de que as/os candidatas/os possam vir a precisar durante o processo;</li>
+        <li>A criança a partir do momento em que iniciam a convivência.</li>
+
+      </ul>
+      <br>
+      <h5>Procedimentos para a realização da adoção:</h5>
+      <ol>
+        <li>
+          <p>Dirija-se ao serviço da Segurança Social da zona onde vive e manifeste aí a sua vontade de adotar uma
+            criança.</p>
+        </li>
+        <li>
+          <p>Compareça na sessão informativa do Plano de Formação para a Adoção onde vai receber informação sobre os
+            objetivos da adoção, o que é necessário para poder adotar e o processo de adoção (candidatura, formulários e
+            documentos necessários).</p>
+        </li>
+        <li>
+          <p>Entregue a sua candidatura, que deve ser apresentada nos serviços de adoção da Segurança Social da zona
+            onde vive. Quando entregar os documentos necessários, recebe um certificado de formalização de candidatura.
+          </p>
+        </li>
+        <li>
+          <p>Os serviços avaliam se reúne as condições necessárias para adotar, o que implica uma avaliação
+            psicossocial. Esta fase dura, no máximo, 6 meses e inclui uma segunda sessão de formação. No final desta
+            fase, as pessoas
+            são informadas se reúnem ou não as condições necessárias para adotar.</p>
+        </li>
+        <li>
+          <p>As/Os candidatas/os são inscritas/os numa lista de espera. Quando existem crianças que podem ser adotadas,
+            os técnicos da Segurança Social consultam a lista para pesquisar candidatas/os.</p>
+        </li>
+        <li>
+          <p>Aguarde uma proposta de adoção. Quando as características de uma criança por adotar coincidirem com as
+            capacidades e o pedido de uma/um candidata/o na lista, a Segurança Social faz uma proposta de adoção.</p>
+        </li>
+        <li>
+          <p>A criança e a/o adotante vão conhecer-se. Se a proposta for aceite, inicia-se o período de transição.
+            Durante este período, a criança e a/o candidata/o a adotante conhecem-se.</p>
+        </li>
+        <li>
+          <p>Pede-se ao tribunal que reconheça a criança como filha da/o adotante. Depois de um período de convivência
+            com a criança, se forem criados laços afetivos, pede-se ao tribunal que reconheça definitivamente a criança
+            como filha da/do adotante. Habitualmente, este período de convivência com a criança (pré-adoção) dura 6
+            meses.
+          </p>
+        </li>
+        <li>
+          <p>O processo de adoção termina e a adoção torna-se definitiva, quando houver uma sentença do tribunal a
+            reconhecer a criança como filha da/do adotante.</p>
+        </li>
+      </ol>
+      <br>
+      <p>Para informações oficiais e mais detalhadas, <a
+          href="https://eportugal.gov.pt/servicos/adotar-uma-crianca">clique aqui</a>.</p>
+
+
+    </section>
+<!-------------------------------------Secção Responsabilidade-------------------------->
+
+    <section id="Deveres" style="text-align:justify; text-justify: inter-word;">
+
+      <br>
+      <hr>
+      <br>
+      <br>
+      <h2 class="letra-azul">Responsabilidades e deveres parentais</h2>
+      <br>
+      <p>As principais responsabilidades dos pais para com os filhos são as seguintes:</p>
+      <ul>
+        <li>Educar os filhos, proporcionando-lhes formação geral e profissional, em especial aos filhos diminuídos
+          física e mentalmente;</li>
+        <li>Dentro das possibilidades dos pais, promover o desenvolvimento físico e psíquico dos filhos;</li>
+        <li>Prover ao sustento dos filhos e assumir as despesas relativas à sua segurança, saúde e educação;</li>
+        <li>Representar os filhos;</li>
+        <li>Administrar os bens dos filhos com o mesmo cuidado com que administram os seus;</li>
+        <li>Ter a guarda e determinar qual a residência dos filhos;</li>
+        <li>Reclamar os filhos, com recurso à autoridade pública se necessário, caso aqueles abandonem a casa paterna ou
+          sejam retirados dela;</li>
+        <li>Decidir sobre a educação religiosa dos filhos menores de 16 anos;</li>
+        <li>De acordo com a maturidade dos filhos, ter em conta a opinião destes nos assuntos familiares importantes e
+          reconhecer-lhes autonomia na organização da própria vida.</li>
+      </ul>
+
+
+    </section>
+<!-------------------------------------Secção Educação-------------------------->
+
+    <section id="Educacao" style="text-align:justify; text-justify: inter-word;">
+
+      <br>
+      <hr>
+      <br>
+      <br>
+      <h2 class="letra-magenta">Educação</h2>
+      <br>
+      <h5>A educação em casa</h5>
+      <p>A educação exige regras e crianças que crescem com regras tornam-se seres humanos mais felizes. Ficam também
+        emocional e socialmente equilibrados, capazes de ultrapassar as adversidades da vida e de aprender com os erros.
+        <br>
+        Educar não é uma tarefa simples. Os pais devem estabelecer regras e impor limites em função da fase de
+        desenvolvimento em que se encontram. <br>
+        A aplicação de regras claras estimula o desenvolvimento de comportamentos positivos nas crianças, que contribuem
+        para o desenvolvimento de habilidades sociais, como a empatia e o autocontrolo. Ao serem motivadas a explorar o
+        seu ambiente dentro de certos limites, as crianças aprendem a respeitar a liberdade e a confiança que é
+        depositada em si. <br>
+      </p>
+      <br>
+      <h5>A educação na escola</h5>
+      <p>
+        Já sobre a educação escolar, esta, é a maior referência para as crianças a nível de conhecimento. A escola é uma
+        referência social e afetiva, funciona como um porto de segurança para as questões socioemocionais dos alunos.
+        <br>
+        A modificação da família trouxe para a escola a função de também proteger e cuidar das crianças e jovens
+        enquanto crescem. <br>
+        Na escola de hoje, os alunos precisam aprender a construir os valores que asseguram a civilização, compreender a
+        necessidade de viver em harmonia e ainda compartilhar os seus medos e dificuldades com os amigos e com adultos
+        sempre prontos a ajudar quem necessite. <br>
+        A escola é o evento mais importante na vida da criança e do jovem, porque lá estão os amigos e é lá que
+        constroem sua autonomia, capacidade cognitiva e moralidade.
+      </p>
+
+    </section>
+
+<!-------------------------------------Secção Equilibrio-------------------------->
+
+    <section id="Equilibrio" style="text-align:justify; text-justify: inter-word;">
+
+      <br>
+      <hr>
+      <br>
+      <br>
+      <h2 class="letra-amarela">Equilíbrio família-trabalho</h2>
+      <br>
+      <p>Atualmente, um dos desafios mais importantes que a maioria dos profissionais enfrenta no seu dia-a-dia, é
+        conseguir responder com eficácia a todas as solicitações que lhe são feitas. <br>
+        Por exemplo, quando é exigido ou pedido que prolonguem o horário de trabalho e isso os impede de ir buscar os
+        filhos à escola, podemos falar de conflito entre o trabalho e a família, porque o desempenho do seu papel
+        profissional está a interferir negativamente com o desempenho do seu papel parental. <br><br>
+        O conflito entre o trabalho e a família tem ganho cada vez mais relevância, porque a maioria dos profissionais,
+        além de ter demasiadas tarefas que precisam de ser realizadas em prazos demasiados curtos, hoje em dia, muitos
+        têm dificuldade em gerir a fronteira entre a sua atividade e a sua vida pessoal e familiar. O trabalho deixou de
+        ter uma hora e um local, passando a invadir a esfera privada. É em casa que se conclui aquela tarefa que no
+        escritório não se conseguiu terminar. É no caminho para casa que se contacta aquele cliente ou fornecedor com
+        quem não se conseguiu falar entre as 9 e as 18h, é durante uma atividade social que se aproveita para olhar e
+        responder aos e-mails que não se conseguiu consultar durante o dia. <br>
+        De facto, o que se passa hoje é que não só as organizações tendem a considerar um bom trabalhador aquele que que
+        está sempre disponível, como os próprios trabalhadores tendem a estar sempre a trabalhar ou a pensar no
+        trabalho, mesmo quando estão fora do local e do horário do seu trabalho. <br><br>
+        Os níveis de conflito entre o trabalho e família só podem diminuir se existir uma cultura organizacional, isto
+        é, um conjunto de valores que desencorajam os profissionais a estar sempre disponíveis, se existirem chefes que
+        respeitem e valorizem o espaço e a hora privada e se cada um dos profissionais souber gerir horários e
+        fronteiras entre a sua vida profissional e sua vida pessoal/familiar.
+      </p>
+      <br>
+      <br>
+    </section>
+  </div>
+  <!------------------------------------------------------------------------------------------------------------------------------------>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Third party plugin JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <!-- Contact form JS-->
+  <script src="assets/mail/jqBootstrapValidation.js"></script>
+  <script src="assets/mail/contact_me.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
