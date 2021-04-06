@@ -28,7 +28,7 @@ public class TopicosService {
     public Optional<Topicos> getOneTopicos(Long topicosId) {
         boolean exists = topicosRepository.existsById(topicosId);
         if (!exists) {
-            throw new IllegalStateException("Topico com id " + topicosId + " não existe");
+            throw new IllegalStateException("Tópico com id " + topicosId + " não existe");
         }
 
         return topicosRepository.findById(topicosId);
@@ -38,7 +38,7 @@ public class TopicosService {
         Optional<Topicos> topicosByNome =
                 topicosRepository.findTopicosByNome(topicos.getNome());
         if (topicosByNome.isPresent()) {
-            throw new IllegalStateException("Este livro já existe");
+            throw new IllegalStateException("Este Tópico já existe");
         }
 
         topicosRepository.save(topicos);
@@ -47,7 +47,7 @@ public class TopicosService {
     public void deleteTopicos(Long id) {
         boolean exists = topicosRepository.existsById(id);
         if (!exists) {
-            throw new IllegalStateException("Topico" + id + " não existe");
+            throw new IllegalStateException("Tópico " + id + " não existe");
         }
 
         topicosRepository.deleteById(id);

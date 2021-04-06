@@ -21,6 +21,14 @@ public class LivrosService {
         return livrosRepository.findAll();
     }
 
+    public Livros getOneCapa(Long livrosId) {
+        boolean exists = livrosRepository.existsById(livrosId);
+        if (!exists) {
+            throw new IllegalStateException("Livro com id " + livrosId + " não existe");
+        }
+
+        return livrosRepository.findById(livrosId).get();
+    }
 
     public void addNewLivros(Livros livros) {
         Optional<Livros> livrosByNome =

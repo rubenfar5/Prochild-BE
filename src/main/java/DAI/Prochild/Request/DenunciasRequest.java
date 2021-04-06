@@ -15,5 +15,5 @@ public class DenunciasRequest {
     private final String sexo;
     private final String faixa_etaria;
     private final String localizacao;
-    private String acontecimento;
+    private final String acontecimento;
 }
