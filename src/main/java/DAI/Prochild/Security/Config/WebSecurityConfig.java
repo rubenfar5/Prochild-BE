@@ -36,7 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 .loginPage("/prochild/login").permitAll()
-                .defaultSuccessUrl("/prochild/registarConta", true);
+                .defaultSuccessUrl("/prochild/menu", true);
     }
 
     @Override
