@@ -25,6 +25,12 @@ public class DireitosController {
         return direitosService.getDireitos();
     }
 
+    @GetMapping(path = "/imagem/{direitosId}")
+    public byte[] getOneImagem(@PathVariable ("direitosId") Long direitosId) {
+        var direito = direitosService.getOneImagem(direitosId);
+        return direito.getImagem();
+    }
+
     @PostMapping(consumes = "multipart/form-data")
     public void create(@RequestPart("imagem")MultipartFile imagem, @RequestPart("audio")MultipartFile audio, @RequestPart("direitos") Direitos direitos ) throws IOException {
         direitos.setImagem(imagem.getBytes());

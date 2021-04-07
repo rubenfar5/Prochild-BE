@@ -33,4 +33,13 @@ public class DireitosService {
 
         direitosRepository.deleteById(direitosId);
     }
+
+    public Direitos getOneImagem(Long direitosId) {
+        boolean exists = direitosRepository.existsById(direitosId);
+        if (!exists) {
+            throw new IllegalStateException("Direito com id " + direitosId + " não existe");
+        }
+
+        return direitosRepository.findById(direitosId).get();
+    }
 }

@@ -20,24 +20,21 @@ public class Videos {
     private String nome;
     private String descricao;
     private String link;
-    private byte[] thumbnail;
 
     public Videos() {
     }
 
-    public Videos(Long id, String nome, String descricao, String link, byte[] thumbnail) {
+    public Videos(Long id, String nome, String descricao, String link) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.link = link;
-        this.thumbnail = thumbnail;
     }
 
-    public Videos(String nome, String descricao, String link, byte[] thumbnail) {
+    public Videos(String nome, String descricao, String link) {
         this.nome = nome;
         this.descricao = descricao;
         this.link = link;
-        this.thumbnail = thumbnail;
     }
 
     public Long getId() {
@@ -72,14 +69,6 @@ public class Videos {
         this.link = link;
     }
 
-    public byte[] getThumbnail() {
-        return thumbnail;
-    }
-
-    public void setThumbnail(byte[] thumbnail) {
-        this.thumbnail = thumbnail;
-    }
-
     @Override
     public String toString() {
         return "Videos{" +
@@ -87,7 +76,6 @@ public class Videos {
                 ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", link='" + link + '\'' +
-                ", thumbnail=" + Arrays.toString(thumbnail) +
                 '}';
     }
 }

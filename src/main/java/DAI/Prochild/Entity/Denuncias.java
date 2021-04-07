@@ -27,18 +27,16 @@ public class Denuncias {
     public Denuncias() {
     }
 
-    public Denuncias(Long id, String localizacao, /*Date data,*/ String acontecimento, Criancas criancasId) {
+    public Denuncias(Long id, String localizacao, String acontecimento, Criancas criancasId) {
         this.id = id;
         this.localizacao = localizacao;
-        //this.data = data;
         this.data = new Date();
         this.acontecimento = acontecimento;
         this.criancasId = criancasId;
     }
 
-    public Denuncias(String localizacao, /*Date data,*/ String acontecimento, Criancas criancasId) {
+    public Denuncias(String localizacao, String acontecimento, Criancas criancasId) {
         this.localizacao = localizacao;
-        //this.data = data;
         this.data= new Date();
         this.acontecimento = acontecimento;
         this.criancasId = criancasId;

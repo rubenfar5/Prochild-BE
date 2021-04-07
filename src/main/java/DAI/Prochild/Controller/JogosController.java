@@ -1,10 +1,13 @@
 package DAI.Prochild.Controller;
 
 import DAI.Prochild.Entity.Jogos;
+import DAI.Prochild.Entity.Livros;
 import DAI.Prochild.Service.JogosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -23,8 +26,15 @@ public class JogosController {
         return jogosService.getJogos();
     }
 
-    @PostMapping
-    public  void postJogos(@RequestBody Jogos jogos) {
+    @GetMapping(path = "/imagem/{jogosID}")
+    public byte[] getOneImagem(@PathVariable ("jogosID") Long jogosID) {
+        var jogo = jogosService.getOneImagem(jogosID);
+        return jogo.getImagem();
+    }
+
+    @PostMapping(consumes = "multipart/form-data")
+    public void postJogos(@RequestPart("imagem") MultipartFile imagem, @RequestPart("jogo") Jogos jogos) throws IOException {
+        jogos.setImagem(imagem.getBytes());
         jogosService.addNewJogos(jogos);
     }
 

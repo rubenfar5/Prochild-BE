@@ -1,6 +1,7 @@
 package DAI.Prochild.Service;
 
 import DAI.Prochild.Entity.Jogos;
+import DAI.Prochild.Entity.Livros;
 import DAI.Prochild.Repository.JogosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,4 +41,14 @@ public class JogosService {
 
         jogosRepository.deleteById(jogosId);
     }
+
+    public Jogos getOneImagem(Long jogosID) {
+        boolean existis = jogosRepository.existsById(jogosID);
+        if (!existis) {
+            throw new IllegalStateException("Jogo com id " + jogosID + " não existe");
+        }
+
+        return jogosRepository.findById(jogosID).get();
+    }
+
 }

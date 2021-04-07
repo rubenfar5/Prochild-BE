@@ -19,6 +19,7 @@ public class Direitos {
 
     private Long id;
     private String descricao;
+    @Column(columnDefinition = "LONGBLOB")
     private byte[] imagem;
     private byte[] audio;
 

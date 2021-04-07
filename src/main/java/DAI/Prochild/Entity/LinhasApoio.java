@@ -19,6 +19,7 @@ public class LinhasApoio {
 
     private Long id;
     private String nome;
+    @Column(columnDefinition = "LONGBLOB")
     private byte[] imagem;
     private Long contacto;
 

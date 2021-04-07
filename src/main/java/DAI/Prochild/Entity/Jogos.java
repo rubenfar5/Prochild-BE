@@ -19,6 +19,7 @@ public class Jogos {
 
     private Long id;
     private String nome;
+    @Column(columnDefinition = "LONGBLOB")
     private byte[] imagem;
     private String descricao;
     private String regras;

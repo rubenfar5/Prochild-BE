@@ -15,6 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "prochild/livros")
+@CrossOrigin(maxAge = 3600)
 public class LivrosController {
 
     private final LivrosService livrosService;
@@ -24,7 +25,6 @@ public class LivrosController {
         this.livrosService = livrosService;
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping
     public List<Livros> getLivros() {
         return livrosService.getLivros();

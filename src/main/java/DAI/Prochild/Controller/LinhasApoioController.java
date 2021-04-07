@@ -25,6 +25,12 @@ public class LinhasApoioController {
         return linhasApoioService.getLinhasApoio();
     }
 
+    @GetMapping(path = "/imagem/{linhasId}")
+    public byte[] getOneCapa(@PathVariable ("linhasId") Long linhasId) {
+        var linha = linhasApoioService.getOneImagem(linhasId);
+        return linha.getImagem();
+    }
+
     @PostMapping(consumes = "multipart/form-data")
     public void create(@RequestPart("imagem")MultipartFile imagem, @RequestPart("linhaapoio") LinhasApoio linhasApoio) throws IOException {
         linhasApoio.setImagem(imagem.getBytes());

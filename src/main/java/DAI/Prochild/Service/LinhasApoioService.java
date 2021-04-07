@@ -33,4 +33,13 @@ public class LinhasApoioService {
 
         linhasApoioRepository.deleteById(linhasId);
     }
+
+    public LinhasApoio getOneImagem(Long linhasId) {
+        boolean exists = linhasApoioRepository.existsById(linhasId);
+        if (!exists) {
+            throw  new IllegalStateException("Linha de apoio com id " + linhasId + " não existe");
+        }
+
+        return linhasApoioRepository.findById(linhasId).get();
+    }
 }
