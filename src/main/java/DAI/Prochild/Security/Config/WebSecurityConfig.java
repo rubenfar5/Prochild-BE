@@ -35,7 +35,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/prochild/login").permitAll()
+//                .loginPage("/prochild/login").permitAll()
                 .defaultSuccessUrl("/prochild/menu", true);
     }
 
