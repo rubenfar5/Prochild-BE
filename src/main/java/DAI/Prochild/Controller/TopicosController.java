@@ -18,7 +18,7 @@ public class TopicosController {
     private final TopicosService topicosService;
 
     @PostMapping
-    public void postDenuncias(@RequestBody Topicos topicos){
+    public void postTopicos(@RequestBody Topicos topicos){
         topicosService.addNewTopicos(topicos);
     }
 

@@ -31,14 +31,13 @@ public class LivrosController {
     }
 
     @GetMapping(path = "/capa/{livrosId}")
-    public byte[] getOneCapa(@PathVariable ("livrosId") Long livrosId) {
+    public String getOneCapa(@PathVariable ("livrosId") Long livrosId) {
         var livro = livrosService.getOneCapa(livrosId);
         return livro.getCapa();
     }
 
-    @PostMapping(consumes = "multipart/form-data")
-    public void create(@RequestPart("capa") MultipartFile capa, @RequestPart("livro") Livros livro) throws IOException {
-        livro.setCapa(capa.getBytes());
+    @PostMapping
+    public void create(@RequestBody Livros livro) throws IOException {
         livrosService.addNewLivros(livro);
     }
 

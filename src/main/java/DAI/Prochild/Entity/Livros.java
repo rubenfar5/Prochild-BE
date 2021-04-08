@@ -21,12 +21,12 @@ public class Livros {
     private String descricao;
     private String link;
     @Column(columnDefinition = "LONGBLOB")
-    private byte[] capa;
+    private String capa;
 
     public Livros() {
     }
 
-    public Livros(Long id, String nome, String descricao, String link, byte[] capa) {
+    public Livros(Long id, String nome, String descricao, String link, String capa) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
@@ -34,7 +34,7 @@ public class Livros {
         this.capa = capa;
     }
 
-    public Livros(String nome, String descricao, String link, byte[] capa) {
+    public Livros(String nome, String descricao, String link, String capa) {
         this.nome = nome;
         this.descricao = descricao;
         this.link = link;
@@ -73,11 +73,11 @@ public class Livros {
         this.link = link;
     }
 
-    public byte[] getCapa() {
+    public String getCapa() {
         return capa;
     }
 
-    public void setCapa(byte[] capa) {
+    public void setCapa(String capa) {
         this.capa = capa;
     }
 
@@ -88,7 +88,7 @@ public class Livros {
                 ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", link='" + link + '\'' +
-                ", capa=" + Arrays.toString(capa) +
+                ", capa=" + capa +
                 '}';
     }
 }
