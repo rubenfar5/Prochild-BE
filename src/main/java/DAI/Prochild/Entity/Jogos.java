@@ -23,6 +23,7 @@ public class Jogos {
     private String imagem;
     private String descricao;
     private String regras;
+    private String video;
 
     public Jogos() {
     }
@@ -40,6 +41,24 @@ public class Jogos {
         this.imagem = imagem;
         this.descricao = descricao;
         this.regras = regras;
+    }
+
+
+    public Jogos(Long id, String nome, String imagem, String descricao, String regras, String video) {
+        this.id = id;
+        this.nome = nome;
+        this.imagem = imagem;
+        this.descricao = descricao;
+        this.regras = regras;
+        this.video = video;
+    }
+
+    public Jogos(String nome, String imagem, String descricao, String regras, String video) {
+        this.nome = nome;
+        this.imagem = imagem;
+        this.descricao = descricao;
+        this.regras = regras;
+        this.video = video;
     }
 
     public Long getId() {
@@ -82,6 +101,14 @@ public class Jogos {
         this.regras = regras;
     }
 
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
+    }
+
     @Override
     public String toString() {
         return "Jogos{" +
@@ -90,6 +117,7 @@ public class Jogos {
                 ", imagem=" + imagem +
                 ", descricao='" + descricao + '\'' +
                 ", regras='" + regras + '\'' +
+                ", video='" + video + '\'' +
                 '}';
     }
 }

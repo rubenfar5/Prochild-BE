@@ -20,20 +20,20 @@ public class LinhasApoio {
     private Long id;
     private String nome;
     @Column(columnDefinition = "LONGBLOB")
-    private byte[] imagem;
+    private String imagem;
     private Long contacto;
 
     public LinhasApoio() {
     }
 
-    public LinhasApoio(Long id, String nome, byte[] imagem, Long contacto) {
+    public LinhasApoio(Long id, String nome, String imagem, Long contacto) {
         this.id = id;
         this.nome = nome;
         this.imagem = imagem;
         this.contacto = contacto;
     }
 
-    public LinhasApoio(String nome, byte[] imagem, Long contacto) {
+    public LinhasApoio(String nome, String imagem, Long contacto) {
         this.nome = nome;
         this.imagem = imagem;
         this.contacto = contacto;
@@ -55,11 +55,11 @@ public class LinhasApoio {
         this.nome = nome;
     }
 
-    public byte[] getImagem() {
+    public String getImagem() {
         return imagem;
     }
 
-    public void setImagem(byte[] imagem) {
+    public void setImagem(String imagem) {
         this.imagem = imagem;
     }
 
@@ -76,7 +76,7 @@ public class LinhasApoio {
         return "LinhasApoio{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", imagem=" + Arrays.toString(imagem) +
+                ", imagem=" + imagem +
                 ", contacto=" + contacto +
                 '}';
     }
