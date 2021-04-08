@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "prochild/users/familias")
+@RequestMapping(path = "prochild/mensagens")
 @CrossOrigin(maxAge = 3600)
 @AllArgsConstructor
 public class MensagensController {
