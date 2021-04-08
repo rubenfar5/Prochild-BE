@@ -27,14 +27,13 @@ public class JogosController {
     }
 
     @GetMapping(path = "/imagem/{jogosID}")
-    public byte[] getOneImagem(@PathVariable ("jogosID") Long jogosID) {
+    public String getOneImagem(@PathVariable ("jogosID") Long jogosID) {
         var jogo = jogosService.getOneImagem(jogosID);
         return jogo.getImagem();
     }
 
-    @PostMapping(consumes = "multipart/form-data")
-    public void postJogos(@RequestPart("imagem") MultipartFile imagem, @RequestPart("jogo") Jogos jogos) throws IOException {
-        jogos.setImagem(imagem.getBytes());
+    @PostMapping
+    public void postJogos(@RequestBody Jogos jogos) throws IOException {
         jogosService.addNewJogos(jogos);
     }
 

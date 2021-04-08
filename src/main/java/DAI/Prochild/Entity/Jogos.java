@@ -20,14 +20,14 @@ public class Jogos {
     private Long id;
     private String nome;
     @Column(columnDefinition = "LONGBLOB")
-    private byte[] imagem;
+    private String imagem;
     private String descricao;
     private String regras;
 
     public Jogos() {
     }
 
-    public Jogos(Long id, String nome, byte[] imagem, String descricao, String regras) {
+    public Jogos(Long id, String nome, String imagem, String descricao, String regras) {
         this.id = id;
         this.nome = nome;
         this.imagem = imagem;
@@ -35,7 +35,7 @@ public class Jogos {
         this.regras = regras;
     }
 
-    public Jogos(String nome, byte[] imagem, String descricao, String regras) {
+    public Jogos(String nome, String imagem, String descricao, String regras) {
         this.nome = nome;
         this.imagem = imagem;
         this.descricao = descricao;
@@ -58,11 +58,11 @@ public class Jogos {
         this.nome = nome;
     }
 
-    public byte[] getImagem() {
+    public String getImagem() {
         return imagem;
     }
 
-    public void setImagem(byte[] imagem) {
+    public void setImagem(String imagem) {
         this.imagem = imagem;
     }
 
@@ -87,7 +87,7 @@ public class Jogos {
         return "Jogos{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", imagem=" + Arrays.toString(imagem) +
+                ", imagem=" + imagem +
                 ", descricao='" + descricao + '\'' +
                 ", regras='" + regras + '\'' +
                 '}';
