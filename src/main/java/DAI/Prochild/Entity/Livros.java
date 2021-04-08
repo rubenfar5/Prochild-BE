@@ -19,6 +19,7 @@ public class Livros {
     private Long id;
     private String nome;
     private String descricao;
+    @Column(columnDefinition = "LONGBLOB")
     private String link;
     @Column(columnDefinition = "LONGBLOB")
     private String capa;
