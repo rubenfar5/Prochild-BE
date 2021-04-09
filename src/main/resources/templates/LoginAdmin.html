@@ -35,11 +35,11 @@
                                 <div class="text-center">
                                     <h1 class="h2 titulos mb-4">Login</h1>
                                 </div>
-                                <form class="user" action="/prochild/login" method="POST">
+                                <form class="user">
                                     <div class="form-group">
                                         <!-- java script para escolher a cor conforme o menu -->
                                         <label id="emailcor" class="labels-login-magenta"> Email </label>
-                                        <input type="email" id="email" name="username" value="" class="form-control form-control-user"
+                                        <input type="text" id="email" name="username" value="" class="form-control form-control-user"
                                                aria-describedby="emailHelp" placeholder="Introduza um email...">
                                     </div>
                                     <div class="form-group">
@@ -51,9 +51,9 @@
                                     <br>
                                     <!-- colocar no href da linha de baixo o caminho para a proxima pagína -->
                                     <!-- java script para escolher a cor conforme o menu -->
-                                    <button class="btn btn-magenta btn-block" name="submit" type="submit" value="submit">
-                                        Login
-                                    </button>
+                                    <a onclick="pila()" class="btn btn-primary btn-user btn-block">
+                                        Registar
+                                    </a>
                                 <!--</form>-->
                                 <br>
                                 <div class="text-center">
@@ -84,7 +84,7 @@
 <!-- Core theme JS-->
 <script type="text/javascript" src="/js/scripts.js"></script>
 <script type="text/javascript" src="/js/fetch.js"></script>
-
+<script type="text/javascript" src="/js/adminLogin.js"></script>
 </body>
 
 </html>

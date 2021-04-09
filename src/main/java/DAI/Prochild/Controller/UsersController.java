@@ -5,6 +5,7 @@ import DAI.Prochild.Service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,6 +28,11 @@ public class UsersController {
     @GetMapping(path = "{usersId}")
     public Optional<Users> getOneUser(@PathVariable ("usersId") Long usersId) {
         return usersService.getOneUser(usersId);
+    }
+
+    @GetMapping(path = "/loggedIn")
+    public String currentUserName(Principal principal) {
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
     }
 
     @PostMapping
