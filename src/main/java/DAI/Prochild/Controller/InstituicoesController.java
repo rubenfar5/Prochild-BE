@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "prochild/users/instituicoes")
@@ -19,6 +20,11 @@ public class InstituicoesController {
     @PostMapping
     public void postInstituicoes(@RequestBody InstituicoesRequest instituicoesRequest) {
         instituicoesService.addNewInstituicoes(instituicoesRequest);
+    }
+
+    @GetMapping(path = "{instituicoesId}")
+    public Optional<Instituicoes> getOneInstituicao(@PathVariable ("instituicoesId") Long instituicoesId) {
+        return instituicoesService.getOneInstituicao(instituicoesId);
     }
 
     @GetMapping

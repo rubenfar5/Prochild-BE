@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -56,5 +57,14 @@ public class InstituicoesService {
                 !Objects.equals(instituicoes.getConcelho(), concelho)) {
             instituicoes.setConcelho(concelho);
         }
+    }
+
+    public Optional<Instituicoes> getOneInstituicao(Long instituicoesId) {
+        boolean exists = instituicoesRepository.existsById(instituicoesId);
+        if (!exists) {
+            throw new IllegalStateException("Instituição com id " + instituicoesId + " não existe");
+        }
+
+        return instituicoesRepository.findById(instituicoesId);
     }
 }

@@ -5,7 +5,6 @@ import DAI.Prochild.Entity.Users;
 import DAI.Prochild.Repository.FamiliasRepository;
 import DAI.Prochild.Request.FamiliasRequest;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -27,11 +26,11 @@ public class FamiliasService {
 
     public Users addNewFamilias(FamiliasRequest familiasRequest) {
 
-       Users user = usersService.addNewUsers(new Users(
-               familiasRequest.getUsername(),
-               familiasRequest.getEmail(),
-               familiasRequest.getPassword(),
-               familiasRequest.getTipo()
+        Users user = usersService.addNewUsers(new Users(
+                familiasRequest.getUsername(),
+                familiasRequest.getEmail(),
+                familiasRequest.getPassword(),
+                familiasRequest.getTipo()
         ));
 
         familiasRepository.save(new Familias(
@@ -63,4 +62,15 @@ public class FamiliasService {
             familias.setConcelho(concelho);
         }
     }
+
+    public Optional<Familias> getOneFamilia(Long familiasId) {
+        boolean exists = familiasRepository.existsById(familiasId);
+        if (!exists) {
+            throw new IllegalStateException("Familia com id " + familiasId + " não existe");
+        }
+
+        return familiasRepository.findById(familiasId);
+    }
+
 }
+

@@ -1,13 +1,13 @@
 package DAI.Prochild.Controller;
 
 import DAI.Prochild.Entity.Familias;
-import DAI.Prochild.Entity.Users;
 import DAI.Prochild.Request.FamiliasRequest;
 import DAI.Prochild.Service.FamiliasService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "prochild/users/familias")
@@ -25,6 +25,12 @@ public class FamiliasController {
     @GetMapping
     public List<Familias> getFamilias() {
         return familiasService.getFamilias();
+    }
+
+
+    @GetMapping(path = "{familiasId}")
+    public Optional<Familias> getOneFamilia(@PathVariable ("familiasId") Long familiasId) {
+        return familiasService.getOneFamilia(familiasId);
     }
 
     @PutMapping(path = "{familiasId}")
