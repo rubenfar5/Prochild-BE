@@ -92,7 +92,9 @@ public class UsersService implements UserDetailsService {
         if (password != null &&
                 password.length() > 0 &&
                 !Objects.equals(users.getPassword(), password)) {
-            users.setPassword(password);
+            String encodedPassword = bCryptPasswordEncoder.encode(password);
+
+            users.setPassword(encodedPassword);
         }
     }
 
