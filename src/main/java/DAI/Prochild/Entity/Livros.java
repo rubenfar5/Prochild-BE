@@ -23,23 +23,26 @@ public class Livros {
     private String link;
     @Column(columnDefinition = "LONGBLOB")
     private String capa;
+    private String video;
 
     public Livros() {
     }
 
-    public Livros(Long id, String nome, String descricao, String link, String capa) {
+    public Livros(Long id, String nome, String descricao, String link, String capa, String video) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.link = link;
         this.capa = capa;
+        this.video = video;
     }
 
-    public Livros(String nome, String descricao, String link, String capa) {
+    public Livros(String nome, String descricao, String link, String capa, String video) {
         this.nome = nome;
         this.descricao = descricao;
         this.link = link;
         this.capa = capa;
+        this.video = video;
     }
 
     public Long getId() {
@@ -82,6 +85,14 @@ public class Livros {
         this.capa = capa;
     }
 
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
+    }
+
     @Override
     public String toString() {
         return "Livros{" +
@@ -89,7 +100,8 @@ public class Livros {
                 ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", link='" + link + '\'' +
-                ", capa=" + capa +
+                ", capa='" + capa + '\'' +
+                ", video='" + video + '\'' +
                 '}';
     }
 }
