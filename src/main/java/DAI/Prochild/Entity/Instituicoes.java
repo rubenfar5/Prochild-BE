@@ -17,7 +17,6 @@ public class Instituicoes {
     )
     private Long id;
     private String nome;
-    private String localizacao;
     private String concelho;
     private String funcao;
     @OneToOne
@@ -27,18 +26,16 @@ public class Instituicoes {
     public Instituicoes() {
     }
 
-    public Instituicoes(Long id, String nome, String localizacao, String concelho, String funcao, Users usersId) {
+    public Instituicoes(Long id, String nome, String concelho, String funcao, Users usersId) {
         this.id = id;
         this.nome = nome;
-        this.localizacao = localizacao;
         this.concelho = concelho;
         this.funcao = funcao;
         this.usersId = usersId;
     }
 
-    public Instituicoes(String nome, String localizacao, String concelho, String funcao, Users usersId) {
+    public Instituicoes(String nome, String concelho, String funcao, Users usersId) {
         this.nome = nome;
-        this.localizacao = localizacao;
         this.concelho = concelho;
         this.funcao = funcao;
         this.usersId = usersId;
@@ -60,13 +57,6 @@ public class Instituicoes {
         this.nome = nome;
     }
 
-    public String getLocalizacao() {
-        return localizacao;
-    }
-
-    public void setLocalizacao(String localizacao) {
-        this.localizacao = localizacao;
-    }
 
     public String getConcelho() {
         return concelho;
@@ -97,7 +87,6 @@ public class Instituicoes {
         return "Instituicoes{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", localizacao='" + localizacao + '\'' +
                 ", concelho='" + concelho + '\'' +
                 ", funcao='" + funcao + '\'' +
                 ", usersId=" + usersId +

@@ -16,6 +16,5 @@ public class FamiliasRequest {
     private final String tipo;
     private final String nome;
     private final String sexo;
-    private final String localizacao;
     private final String concelho;
 }

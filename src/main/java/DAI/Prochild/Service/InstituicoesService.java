@@ -30,7 +30,6 @@ public class InstituicoesService {
         ));
         instituicoesRepository.save(new Instituicoes(
                 instituicoesRequest.getNome(),
-                instituicoesRequest.getLocalizacao(),
                 instituicoesRequest.getConcelho(),
                 instituicoesRequest.getFuncao(),
                 user

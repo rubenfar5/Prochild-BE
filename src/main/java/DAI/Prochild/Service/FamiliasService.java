@@ -37,7 +37,6 @@ public class FamiliasService {
         familiasRepository.save(new Familias(
                 familiasRequest.getNome(),
                 familiasRequest.getSexo(),
-                familiasRequest.getLocalizacao(),
                 familiasRequest.getConcelho(),
                 user
         ));

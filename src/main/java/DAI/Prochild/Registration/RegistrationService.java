@@ -31,7 +31,6 @@ public class RegistrationService {
         familiasRepository.save(new Familias(
                 request.getNome(),
                 request.getSexo(),
-                request.getLocalizacao(),
                 request.getConcelho(),
                 appUser
                 ));

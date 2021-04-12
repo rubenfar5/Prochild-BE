@@ -15,7 +15,6 @@ public class InstituicoesRequest {
     private final String email;
     private final String tipo;
     private final String nome;
-    private final String localizacao;
     private final String concelho;
     private final String funcao;
 
