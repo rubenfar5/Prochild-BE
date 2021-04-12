@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "prochild/linhasapoio")
+@CrossOrigin(maxAge = 3600)
 public class LinhasApoioController {
 
     private final LinhasApoioService linhasApoioService;

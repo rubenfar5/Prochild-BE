@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "prochild/jogos")
+@CrossOrigin(maxAge = 3600)
 public class JogosController {
 
     private final JogosService jogosService;

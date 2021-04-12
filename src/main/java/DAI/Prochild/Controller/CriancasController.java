@@ -2,6 +2,7 @@ package DAI.Prochild.Controller;
 
 import DAI.Prochild.Entity.Criancas;
 import DAI.Prochild.Service.CriancasService;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "prochild/criancas")
+@CrossOrigin(maxAge = 3600)
 public class CriancasController {
 
     private final CriancasService criancasService;

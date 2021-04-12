@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "prochild/denuncias")
+@CrossOrigin(maxAge = 3600)
 @AllArgsConstructor
 public class DenunciasController {
 

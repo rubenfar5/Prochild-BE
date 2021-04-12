@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "prochild/users")
+@CrossOrigin(maxAge = 3600)
 public class UsersController {
 
     private final UsersService usersService;
@@ -30,10 +31,11 @@ public class UsersController {
         return usersService.getOneUser(usersId);
     }
 
+    /*
     @GetMapping(path = "/loggedIn")
     public String currentUserName(Principal principal) {
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-    }
+    }*/
 
     @PostMapping
     public void postUsers(@RequestBody Users users) {

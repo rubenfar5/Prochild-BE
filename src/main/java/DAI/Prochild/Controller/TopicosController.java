@@ -12,6 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "prochild/topicos")
+@CrossOrigin(maxAge = 3600)
 @AllArgsConstructor
 public class TopicosController {
 

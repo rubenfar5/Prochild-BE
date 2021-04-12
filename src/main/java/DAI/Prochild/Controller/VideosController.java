@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "prochild/videos")
+@CrossOrigin(maxAge = 3600)
 public class VideosController {
 
     private final VideosService videosService;
