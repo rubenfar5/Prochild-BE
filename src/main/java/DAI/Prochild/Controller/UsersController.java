@@ -15,12 +15,10 @@ import java.util.Optional;
 public class UsersController {
 
     private final UsersService usersService;
-    private final SendEmailService sendEmailService;
 
     @Autowired
     public UsersController(UsersService usersService, SendEmailService sendEmailService) {
         this.usersService = usersService;
-        this.sendEmailService = sendEmailService;
     }
 
     @GetMapping
@@ -57,8 +55,4 @@ public class UsersController {
                 usersService.updateUsers(usersId, email, password);
     }
 
-    @PostMapping(path = "{email}")
-    public void enviarEmail(@PathVariable("email") String email) {
-        sendEmailService.sendEmails(email);
-    }
 }
