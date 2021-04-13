@@ -1,8 +1,7 @@
 package DAI.Prochild.Controller;
 
-import DAI.Prochild.Entity.Denuncias;
 import DAI.Prochild.Entity.Topicos;
-import DAI.Prochild.Request.DenunciasRequest;
+import DAI.Prochild.Request.TopicosRequest;
 import DAI.Prochild.Service.TopicosService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +18,7 @@ public class TopicosController {
     private final TopicosService topicosService;
 
     @PostMapping
-    public void postTopicos(@RequestBody Topicos topicos){
+    public void postTopicos(@RequestBody TopicosRequest topicos){
         topicosService.addNewTopicos(topicos);
     }
 

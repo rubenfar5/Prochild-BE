@@ -1,10 +1,10 @@
 package DAI.Prochild.Service;
 
-import DAI.Prochild.Entity.Denuncias;
-import DAI.Prochild.Entity.Livros;
+import DAI.Prochild.Entity.Instituicoes;
 import DAI.Prochild.Entity.Topicos;
+import DAI.Prochild.Repository.InstituicoesRepository;
 import DAI.Prochild.Repository.TopicosRepository;
-import lombok.AllArgsConstructor;
+import DAI.Prochild.Request.TopicosRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +15,12 @@ import java.util.Optional;
 public class TopicosService {
 
     private final TopicosRepository topicosRepository;
+    private final InstituicoesRepository instituicoesRepository;
 
     @Autowired
-    public TopicosService(TopicosRepository topicosRepository) {
+    public TopicosService(TopicosRepository topicosRepository, InstituicoesRepository instituicoesRepository) {
         this.topicosRepository = topicosRepository;
+        this.instituicoesRepository = instituicoesRepository;
     }
 
     public List<Topicos> getTopicos() {
@@ -34,14 +36,20 @@ public class TopicosService {
         return topicosRepository.findById(topicosId);
     }
 
-    public void addNewTopicos(Topicos topicos) {
+    public void addNewTopicos(TopicosRequest topicosRequest) {
         Optional<Topicos> topicosByNome =
-                topicosRepository.findTopicosByNome(topicos.getNome());
+                topicosRepository.findTopicosByNome(topicosRequest.getNome());
         if (topicosByNome.isPresent()) {
-            throw new IllegalStateException("Este livro já existe");
+            throw new IllegalStateException("Este Tópico já existe");
         }
 
-        topicosRepository.save(topicos);
+        Instituicoes insti = instituicoesRepository.findById(topicosRequest.getIdInstituicao()).get();
+
+        topicosRepository.save(new Topicos(
+                topicosRequest.getNome(),
+                topicosRequest.getDescricao(),
+                insti
+        ));
     }
 
     public void deleteTopicos(Long id) {
