@@ -22,6 +22,11 @@ public class TopicosController {
         topicosService.addNewTopicos(topicos);
     }
 
+    @PostMapping(path = "{child}")
+    public void postTopicosChild(@RequestBody TopicosRequest topicos){
+        topicosService.addNewTopicosChild(topicos);
+    }
+
     @GetMapping
     public List<Topicos> getTopicos() {
         return topicosService.getTopicos();

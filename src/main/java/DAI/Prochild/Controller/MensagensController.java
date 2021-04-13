@@ -1,6 +1,7 @@
 package DAI.Prochild.Controller;
 
 import DAI.Prochild.Entity.Mensagens;
+import DAI.Prochild.Request.MensagensRequest;
 import DAI.Prochild.Service.MensagensService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +17,13 @@ public class MensagensController {
     private final MensagensService mensagensService;
 
     @PostMapping
-    public void postMensagens(@RequestBody Mensagens mensagens) {
+    public void postMensagens(@RequestBody MensagensRequest mensagens) {
         mensagensService.addNewMensagem(mensagens);
+    }
+
+    @PostMapping(path = "{child}")
+    public void postMensagensChild(@RequestBody MensagensRequest mensagens) {
+        mensagensService.addNewMensagemChild(mensagens);
     }
 
     @GetMapping

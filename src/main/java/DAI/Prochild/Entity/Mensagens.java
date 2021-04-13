@@ -29,18 +29,24 @@ public class Mensagens {
     public Mensagens() {
     }
 
-    public Mensagens(Long id, Date data, String conteudo, Users usersId, Topicos topicosId) {
+    public Mensagens(Long id, String conteudo, Users usersId, Topicos topicosId) {
         this.id = id;
-        this.data = data;
+        this.data = new Date();
         this.conteudo = conteudo;
         this.usersId = usersId;
         this.topicosId = topicosId;
     }
 
-    public Mensagens(Date data, String conteudo, Users usersId, Topicos topicosId) {
-        this.data = data;
+    public Mensagens(String conteudo, Users usersId, Topicos topicosId) {
+        this.data = new Date();
         this.conteudo = conteudo;
         this.usersId = usersId;
+        this.topicosId = topicosId;
+    }
+
+    public Mensagens(String conteudo, Topicos topicosId) {
+        this.data = new Date();
+        this.conteudo = conteudo;
         this.topicosId = topicosId;
     }
 

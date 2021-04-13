@@ -1,9 +1,10 @@
 package DAI.Prochild.Service;
 
-import DAI.Prochild.Entity.Instituicoes;
 import DAI.Prochild.Entity.Topicos;
+import DAI.Prochild.Entity.Users;
 import DAI.Prochild.Repository.InstituicoesRepository;
 import DAI.Prochild.Repository.TopicosRepository;
+import DAI.Prochild.Repository.UsersRepository;
 import DAI.Prochild.Request.TopicosRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,12 +16,12 @@ import java.util.Optional;
 public class TopicosService {
 
     private final TopicosRepository topicosRepository;
-    private final InstituicoesRepository instituicoesRepository;
+    private final UsersRepository usersRepository;
 
     @Autowired
-    public TopicosService(TopicosRepository topicosRepository, InstituicoesRepository instituicoesRepository) {
+    public TopicosService(TopicosRepository topicosRepository, InstituicoesRepository instituicoesRepository, UsersRepository usersRepository) {
         this.topicosRepository = topicosRepository;
-        this.instituicoesRepository = instituicoesRepository;
+        this.usersRepository = usersRepository;
     }
 
     public List<Topicos> getTopicos() {
@@ -43,12 +44,12 @@ public class TopicosService {
             throw new IllegalStateException("Este Tópico já existe");
         }
 
-        Instituicoes insti = instituicoesRepository.findById(topicosRequest.getIdInstituicao()).get();
+        Users user = usersRepository.findById(topicosRequest.getUsersId()).get();
 
         topicosRepository.save(new Topicos(
                 topicosRequest.getNome(),
                 topicosRequest.getDescricao(),
-                insti
+                user
         ));
     }
 
@@ -61,4 +62,16 @@ public class TopicosService {
         topicosRepository.deleteById(id);
     }
 
+    public void addNewTopicosChild(TopicosRequest topicos) {
+        Optional<Topicos> topicosByNome =
+                topicosRepository.findTopicosByNome(topicos.getNome());
+        if (topicosByNome.isPresent()) {
+            throw new IllegalStateException("Este Tópico já existe");
+        }
+
+        topicosRepository.save(new Topicos(
+                topicos.getNome(),
+                topicos.getDescricao()
+        ));
+    }
 }

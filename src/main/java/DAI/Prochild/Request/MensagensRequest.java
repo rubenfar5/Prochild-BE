@@ -9,8 +9,8 @@ import lombok.ToString;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class TopicosRequest {
-    private final String nome;
-    private final String descricao;
+public class MensagensRequest {
+    private final String conteudo;
     private final Long usersId;
+    private final Long topicosId;
 }

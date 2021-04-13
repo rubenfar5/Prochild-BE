@@ -20,23 +20,28 @@ public class Topicos {
     private String nome;
     private String descricao;
     @OneToOne
-    @JoinColumn(name = "instituicoesId")
-    private Instituicoes instituicoesId;
+    @JoinColumn(name = "usersId")
+    private Users usersId;
 
     public Topicos() {
     }
 
-    public Topicos(Long id, String nome, String descricao, Instituicoes instituicoesId) {
+    public Topicos(Long id, String nome, String descricao, Users usersId) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
-        this.instituicoesId = instituicoesId;
+        this.usersId = usersId;
     }
 
-    public Topicos(String nome, String descricao, Instituicoes instituicoesId) {
+    public Topicos(String nome, String descricao, Users usersId) {
         this.nome = nome;
         this.descricao = descricao;
-        this.instituicoesId = instituicoesId;
+        this.usersId = usersId;
+    }
+
+    public Topicos(String nome, String descricao) {
+        this.nome = nome;
+        this.descricao = descricao;
     }
 
     public Long getId() {
@@ -63,12 +68,12 @@ public class Topicos {
         this.descricao = descricao;
     }
 
-    public Instituicoes getInstituicoesId() {
-        return instituicoesId;
+    public Users getUsersId() {
+        return usersId;
     }
 
-    public void setInstituicoesId(Instituicoes instituicoesId) {
-        this.instituicoesId = instituicoesId;
+    public void setUsersId(Users usersId) {
+        this.usersId = usersId;
     }
 
     @Override
@@ -77,7 +82,7 @@ public class Topicos {
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
-                ", instituicoesId=" + instituicoesId +
+                ", usersId=" + usersId +
                 '}';
     }
 }

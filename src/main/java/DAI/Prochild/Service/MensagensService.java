@@ -1,7 +1,12 @@
 package DAI.Prochild.Service;
 
 import DAI.Prochild.Entity.Mensagens;
+import DAI.Prochild.Entity.Topicos;
+import DAI.Prochild.Entity.Users;
 import DAI.Prochild.Repository.MensagensRepository;
+import DAI.Prochild.Repository.TopicosRepository;
+import DAI.Prochild.Repository.UsersRepository;
+import DAI.Prochild.Request.MensagensRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,13 +16,25 @@ import java.util.List;
 public class MensagensService {
 
     private final MensagensRepository mensagensRepository;
+    private final UsersRepository usersRepository;
+    private final TopicosRepository topicosRepository;
 
     @Autowired
-    public MensagensService(MensagensRepository mensagensRepository) {
+    public MensagensService(MensagensRepository mensagensRepository, UsersRepository usersRepository, TopicosRepository topicosRepository) {
         this.mensagensRepository = mensagensRepository;
+        this.usersRepository = usersRepository;
+        this.topicosRepository = topicosRepository;
     }
 
-    public void addNewMensagem(Mensagens mensagens) {
+    public void addNewMensagem(MensagensRequest mensagens) {
+        Users user = usersRepository.findById(mensagens.getUsersId()).get();
+        Topicos topico = topicosRepository.findById(mensagens.getTopicosId()).get();
+
+        mensagensRepository.save(new Mensagens(
+                mensagens.getConteudo(),
+                user,
+                topico
+        ));
     }
 
     public List<Mensagens> getMensagens() {
@@ -31,5 +48,14 @@ public class MensagensService {
         }
 
         mensagensRepository.deleteById(mensagensId);
+    }
+
+    public void addNewMensagemChild(MensagensRequest mensagens) {
+        Topicos topico = topicosRepository.findById(mensagens.getTopicosId()).get();
+
+        mensagensRepository.save(new Mensagens(
+                mensagens.getConteudo(),
+                topico
+        ));
     }
 }
