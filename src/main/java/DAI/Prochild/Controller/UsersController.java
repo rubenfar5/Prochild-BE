@@ -1,11 +1,11 @@
 package DAI.Prochild.Controller;
 
 import DAI.Prochild.Entity.Users;
+import DAI.Prochild.MailSender.SendEmailService;
 import DAI.Prochild.Service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.security.Principal;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,10 +15,12 @@ import java.util.Optional;
 public class UsersController {
 
     private final UsersService usersService;
+    private final SendEmailService sendEmailService;
 
     @Autowired
-    public UsersController(UsersService usersService) {
+    public UsersController(UsersService usersService, SendEmailService sendEmailService) {
         this.usersService = usersService;
+        this.sendEmailService = sendEmailService;
     }
 
     @GetMapping
@@ -53,5 +55,10 @@ public class UsersController {
             @RequestParam(required = false) String email,
             @RequestParam(required = false) String password) {
                 usersService.updateUsers(usersId, email, password);
+    }
+
+    @PostMapping(path = "{email}")
+    public void enviarEmail(@PathVariable("email") String email) {
+        sendEmailService.sendEmails(email);
     }
 }
