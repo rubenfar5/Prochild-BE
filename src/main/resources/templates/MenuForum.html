@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Fórum</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/logos/LogoApp-small.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<body id="page-top" onload="changeMainMenu(); fetchForum(); fetchMessages(); isChild()" onunload="clearReload()">
+    <button onclick="topFunction()" id="topBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/logos/LogoApp.png"
+                    alt="" /></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ml-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="MenuPrincipal.html"><i
+                                class="fas fa-home"></i> Menu Principal</a></li>
+                    <li class="nav-item" id="forumbtn"><a class="nav-link js-scroll-trigger" href="MenuForum.html"><i
+                                class="fas fa-comments"></i> Fórum</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" id="direitosbtn"
+                            href="MenuDireitos.html"><i class="fas fa-balance-scale"></i> Direitos das Crianças</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="MenuDiversoes.html"><i
+                                class="fas fa-puzzle-piece"></i> Diversões</a></li>
+                    <li class="nav-item" id="apoiosplace"><a class="nav-link js-scroll-trigger"
+                            href="MenuLinhasApoio.html"><i class="fas fa-headset"></i> Ajudas</a></li>
+                    <li class="nav-item" id="perfilbtn">
+                        <a class="nav-link js-scroll-trigger" href="DadosPerfil.html"><i class="fas fa-user"></i>
+                            Perfil</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href=""><i
+                                class="fas fa-sign-out-alt"></i>
+                            Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead9">
+        <div class="container">
+            <div class="masthead9-heading">Fórum</div>
+            <button class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" id="startDiscussion1"
+                onclick="StartDiscussion(1)">Criar discussão</button>
+        </div>
+    </header>
+    <br>
+    <section class="page-section">
+        <div class="container">
+            <div id="formForum1" clas="row forumPad" style="display: none;">
+                <div class="col-lg-12">
+                    <form>
+                        <div class="form-group">
+                            Título
+                            <input type="text" id="novaDiscussaoTitulo" class="form-control" size="40"></input>
+                            <br>
+                            Descrição
+                            <textarea class="newDiscussionText form-control" id="novaDiscussaoTexto"
+                                rows="5"></textarea>
+                        </div>
+                    </form>
+                    <a class="btn btn-primary" id="btnAddDiscuss" align="center" onclick="addDiscuss()">Confirmar</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="topico_1" class="row categoryModule forumMargin">
+                <a>
+                    <div class="col-lg-12 columnPad">
+                        <div class="pullLeft">
+                            <h1>Discussão</h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- class forum-fundo diferente-->
+            <div id="discussao_1" class="row fundo-forum forumPad">
+                <table class="forumTable" id="discussTable">
+                </table>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </section>
+    <section class="page-section bg-light" id="sexaoMensagem" style="display: none;">
+
+        <div class="container">
+            <div id="topico_1" class="row categoryModule forumMargin">
+                <a>
+                    <div class="col-lg-12 columnPad">
+                        <div class="pullLeft">
+                            <h1 id="titulo"></h1>
+                            <p id="descricao"></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- class forum-fundo diferente-->
+            <div id="discussao_1" class="row fundo-forum forumPad">
+                <table class="forumTable" id="messageTable">
+                </table>
+            </div>
+            <button class="btn btn-primary js-scroll-trigger" id="startDiscussion2"
+                onclick="StartDiscussion(2)">Responder</button>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <div id="formForum2" clas="row forumPad" style="display: none;">
+                <div class="col-lg-12">
+                    <form>
+                        <div class="form-group">
+                            Mensagem
+                            <textarea class="newDiscussionText form-control" id="novaMensagem" rows="5"></textarea>
+                        </div>
+                    </form>
+                    <a class="btn btn-primary" id="btnSendAnswer" align="center" onclick="answer()">Confirmar</a>
+                </div>
+            </div>
+        </div>
+        <br>
+    </section>
+</body>
+
+<script>
+    function StartDiscussion(n) {
+        var html_id = "#formForum" + n;
+        var button_id = "#startDiscussion" + n;
+        if ($(html_id).css("display") == "block") {
+            $(html_id).css("display", "none");
+            $(button_id).text("Criar Discussão");
+        } else {
+            $(html_id).css("display", "block");
+            $(button_id).text("Cancelar");
+        }
+    }
+</script>
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+<!-- Bootstrap core JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<!-- Contact form JS-->
+<script src="assets/mail/jqBootstrapValidation.js"></script>
+<script src="assets/mail/contact_me.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<script src="js/forum.js"></script>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Escolher Idade</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/logos/LogoApp-small.png" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</head>
+
+<body id="bg2">
+  <div class="row justify-content-center">
+    <img src="assets/img/logos/LogoApp.png" class="responsive" />
+  </div>
+  <br />
+  <div class="row justify-content-center">
+    <h1 class="responsive">Género</h1>
+  </div>
+
+  <div class="row justify-content-center">
+    <a class="kids-ages" id="male-btn" onclick="chooseGenderMale(); moveOn();">
+      <div class="ages-thumb">
+        <div class="ages-img">
+          <img class="rounded-circle responsive" style="width: 146px"
+            src="assets/img/perfis-idades/Stickman_male.png" />
+        </div>
+      </div>
+    </a>
+    <a class="kids-ages" id="female-btn" onclick="chooseGenderFemale(); moveOn();">
+      <div class="ages-thumb">
+        <div class="ages-img">
+          <img class="rounded-circle responsive" style="width: 146px"
+            src="assets/img/perfis-idades/Stickman_female.png" />
+        </div>
+      </div>
+    </a>
+  </div>
+  <br />
+  <br />
+  <div class="row justify-content-center">
+    <h1 class="responsive">Idade</h1>
+  </div>
+
+  <div class="row justify-content-center">
+    <a class="kids-ages" id="1btn" onclick="chooseAge(1); moveOn();">
+      <div class="ages-thumb">
+        <div class="ages-img">
+          <img class="rounded-circle responsive" style="width: 188px"
+            src="assets/img/perfis-idades/kid_picking_nose.jpg" />
+        </div>
+        <div class="ages-content">
+          <h1 class="responsive">3 aos 6</h1>
+        </div>
+      </div>
+    </a>
+    <a id="2btn" class="kids-ages" onclick="chooseAge(2); moveOn();">
+      <div class="ages-thumb">
+        <div class="ages-img">
+          <img class="rounded-circle responsive" src="assets/img/perfis-idades/6-9-kid.jpg" />
+        </div>
+        <div class="ages-content">
+          <h1 class="responsive">6 aos 9</h1>
+        </div>
+      </div>
+    </a>
+    <a id="3btn" class="kids-ages" onclick="chooseAge(3); moveOn();">
+      <div class="ages-thumb">
+        <div class="ages-img">
+          <img class="rounded-circle responsive" style="width: 188px" src="assets/img/perfis-idades/9-12-kids.png" />
+        </div>
+        <div class="ages-content">
+          <h1 class="responsive">9 aos 12</h1>
+        </div>
+      </div>
+    </a>
+    <a id="4btn" class="kids-ages" onclick="chooseAge(4); moveOn();">
+      <div class="ages-thumb">
+        <div class="ages-img">
+          <img class="rounded-circle responsive" style="width: 188px" src="assets/img/perfis-idades/12-15-kids.png" />
+        </div>
+        <div class="ages-content">
+          <h1 class="responsive">12 aos 18</h1>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------------------------>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Third party plugin JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <!-- Contact form JS-->
+  <script src="assets/mail/jqBootstrapValidation.js"></script>
+  <script src="assets/mail/contact_me.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

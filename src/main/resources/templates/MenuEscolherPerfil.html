@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Escolher Perfil</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/logos/LogoApp-small.png" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<body id="bg1" onload="clearLocalStorage()">
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <img class="responsive" src="assets/img/logos/LogoApp.png" alt="Logo HappyChild" />
+    </div>
+    <br />
+    <div class="row justify-content-center">
+      <h3>Selecionar Perfil</h3>
+    </div>
+    <br />
+    <br />
+    <!-- Page Features -->
+    <div class="row text-center justify-content-center">
+      <a class="col-lg-3 col-md-6 mb-4" onclick="chooseTypeChild()">
+        <div class="card border-magenta">
+          <img class="card-img-top" src="assets/img/perfis-idades/Criancas.png" alt="" />
+          <br />
+          <p class="letra-magenta" style="font-weight: bold" class="">Crianças</p>
+        </div>
+      </a>
+
+      <a class="col-lg-3 col-md-6 mb-4" onclick="chooseTypeFamily()">
+        <div class="card border-amarelo">
+          <img class="card-img-top" src="assets/img/perfis-idades/Familias.jpg" alt="" />
+          <br />
+          <p class="letra-amarela" style="font-weight: bold">Famílias</p>
+        </div>
+      </a>
+
+      <a class="col-lg-3 col-md-6 mb-4" id="a1" onclick="chooseTypeInstitution()">
+        <div class="card border-azul">
+          <img class="card-img-top" src="assets/img/perfis-idades/Instituicoes.jpg" alt="" />
+          <br />
+          <p class="letra-azul" style="font-weight: bold">Instituições</p>
+        </div>
+      </a>
+    </div>
+    <br>
+    <div class="row justify-content-center">
+      <a onclick="chooseTypeAdmin()" class="letra-AzulEscura">Administrador <i class="fas fa-user-shield fa-2x"></i></a>
+    </div>
+  </div>
+  <br />
+  <!-- Footer -->
+  <footer class="row py-5 justify-content-center">
+    <div class="row container justify-content-center">
+      <img src="assets/img/logos/logoCompleto.png" class="responsive" />
+      <img src="assets/img/logos/Apoios.png" class="responsive" />
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Third party plugin JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <!-- Contact form JS-->
+  <script src="assets/mail/jqBootstrapValidation.js"></script>
+  <script src="assets/mail/contact_me.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
