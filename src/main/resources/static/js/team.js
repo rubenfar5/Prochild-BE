@@ -1,20 +1,18 @@
 var slideIndex = 1;
 var fotos1 = 
 [
+["assets/img/team/ruben.jpg", ""],
 ["assets/img/team/Nuno.png",""],
+["assets/img/team/albano.jpg",""],
+["assets/img/team/vasco.jpg",""],
+["assets/img/team/Joao.jpg", ""],
 ["assets/img/team/AnaCatarina.jpeg",""],
 ["assets/img/team/carol.jpg",""],
 ["assets/img/team/catarinasilva.jpg",""],
 ["assets/img/team/MarianaCancela.jpg",""],
-["assets/img/team/albano.jpg",""],
-["assets/img/team/vasco.jpg",""],
-["assets/img/team/Joao.jpg", ""],
-["assets/img/team/", ""],
-["assets/img/team/", ""],
-["assets/img/team/", ""],
-["assets/img/team/", ""],
-["assets/img/team/", ""],
-["assets/img/team/", ""],
+["assets/img/team/MarianaPeixoto.jpg", ""],
+["assets/img/team/Almeida.jpeg", ""],
+["assets/img/team/Dino.png", ""],
 ];
 var slides = fotos1.length;
 showSlides(slideIndex);

@@ -8,21 +8,47 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(maxAge = 3600)
 @Controller
-@RequestMapping("/prochild")
+@RequestMapping("/")
 public class MappingSite {
 
-        @GetMapping("registarConta")
-        public String registarPage() {
-            return "RegistarFamilia";
-        }
+    @GetMapping("escolherPerfil")
+    public String escolherPerfil() {
+        return "MenuEscolherPerfil";
+    }
 
-        @GetMapping("login")
-        public String loginPage() {
-            return "LoginAdmin";
-        }
+    @GetMapping("loginAdmin")
+    public String loginAdmin() {
+        return "LoginAdmin";
+    }
 
-        @GetMapping("menu")
-        public String menuAdmin() {
-            return "MenuPrincipal";
-        }
+    @GetMapping("loginFamilias")
+    public String loginFamilias() {
+        return "LoginFamilias";
+    }
+
+    @GetMapping("loginInstituicoes")
+    public String loginInstituicoes() {
+        return "LoginInstituicoes";
+    }
+
+    @GetMapping("menuPrincipal")
+    public String menuPrincipal() {
+        return "MenuPrincipal";
+    }
+
+    @GetMapping("perfil")
+    public String perfil() {
+        return "DadosPerfil";
+    }
+
+    @GetMapping("registarFamilia")
+    public String registarFamilia() {
+        return "RegistarFamilia";
+    }
+
+    @GetMapping("registarInstituicao")
+    public String registarInstituicao() {
+        return "RegistarInstituicao";
+    }
+
     }

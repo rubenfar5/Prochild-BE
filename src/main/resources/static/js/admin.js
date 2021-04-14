@@ -20,3 +20,19 @@
         $("body").toggleClass("sb-sidenav-toggled");
     });
 })(jQuery);
+
+//----------------------------------------------------------------------------------------------------------//
+
+
+function fetchAllUsers() {
+    async function fetchAsync() {
+        const response = await fetch(`http://localhost:8080/prochild/users`);
+        let users = await response.json()
+            document.getElementById("totalUtilizadores").innerHTML = users.length;
+            
+        
+    }
+    fetchAsync()
+        .then((data) => console.log("ok"))
+        .catch((reason) => console.log(reason.message));
+}
