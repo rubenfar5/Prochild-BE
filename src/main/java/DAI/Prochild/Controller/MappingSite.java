@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class MappingSite {
 
-    @GetMapping("escolherPerfil")
+    @GetMapping("menuEscolherPerfil")
     public String escolherPerfil() {
         return "MenuEscolherPerfil";
     }
@@ -36,7 +36,7 @@ public class MappingSite {
         return "MenuPrincipal";
     }
 
-    @GetMapping("perfil")
+    @GetMapping("dadosPerfil")
     public String perfil() {
         return "DadosPerfil";
     }
@@ -49,6 +49,66 @@ public class MappingSite {
     @GetMapping("registarInstituicao")
     public String registarInstituicao() {
         return "RegistarInstituicao";
+    }
+
+    @GetMapping("bolinha")
+    public String bolinha() {
+        return "bolinha";
+    }
+
+    @GetMapping("formularioDenuncias")
+    public String formularioDenuncias() {
+        return "FormularioDenuncias";
+    }
+
+    @GetMapping("Dashboard")
+    public String dashboard() {
+        return "index";
+    }
+
+    @GetMapping("menuApoiosFamiliares")
+    public String menuFamiliares() {
+        return "MenuApoisFamiliares";
+    }
+
+    @GetMapping("menuDireitos")
+    public String menuDireitos() {
+        return "MenuDireitos";
+    }
+
+    @GetMapping("menuDireitosCriancas")
+    public String menuDireitosCriancas() {
+        return "MenuDireitosCriancas";
+    }
+
+    @GetMapping("menuDiversoes")
+    public String menuDiversoes() {
+        return "MenuDiversoes";
+    }
+
+    @GetMapping("menuEscolherIdade")
+    public String menuEscolherIdade() {
+        return "MenuEscolherIdade";
+    }
+
+    @GetMapping("menuForum")
+    public String menuForum() {
+        return "MenuForum";
+    }
+
+    @GetMapping("menuJogos")
+    public String menuJogos() {
+        return "MenuJogos";
+    }
+
+    @GetMapping("menuLinhasApoio")
+    public String menuLinhasApoio() {
+        return "MenuLinhasApoio";
+    }
+
+    @GetMapping("menuLinhasPolicia")
+    public String menuLinhasPolicia() {
+        return "MenuLinhasPolicia";
     }
 
     }
