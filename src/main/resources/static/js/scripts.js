@@ -73,7 +73,7 @@ function chooseTypeInstitution() {
     window.location.href = "/loginInstituicoes";
 }
 
-function chooseTypeInstitution() {
+function chooseTypeAdmin() {
     localStorage.setItem("type", "Admin");
     window.location.href = "/loginAdmin";
 }
