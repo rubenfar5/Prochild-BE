@@ -111,4 +111,53 @@ public class MappingSite {
         return "MenuLinhasPolicia";
     }
 
+    @GetMapping("menuLivros")
+    public String menuLivros() {
+        return "MenuLivro";
+    }
+
+    @GetMapping("menuSelecaoTipoInformacao")
+    public String menuSelecaoTipoInformacao() {
+        return "MenuSelecaoTipoInformacao";
+    }
+
+    @GetMapping("menuTutorial")
+    public String menuTutorial() {
+        return "MenuTutorial";
+    }
+
+    @GetMapping("menuVerDenuncias")
+    public String menuVerDenuncias() {
+        return "MenuVerDenuncias";
+    }
+
+    @GetMapping("menuVideos")
+    public String menuVideos() {
+        return "MenuVideos";
+    }
+
+    @GetMapping("pong")
+    public String pong() {
+        return "pong";
+    }
+
+    @GetMapping("recuperarPalavraPasse")
+    public String recuperarPalavraPasse() {
+        return "RecuperarPalavraPasse";
+    }
+
+    @GetMapping("snake")
+    public String snake() {
+        return "snake";
+    }
+
+    @GetMapping("tetris")
+    public String tetris() {
+        return "tetris";
+    }
+
+    @GetMapping("tictac")
+    public String tictac() {
+        return "tictac";
+    }
     }
