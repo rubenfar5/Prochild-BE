@@ -4,8 +4,12 @@ import DAI.Prochild.Entity.Users;
 import DAI.Prochild.MailSender.SendEmailService;
 import DAI.Prochild.Service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,12 +35,6 @@ public class UsersController {
         return usersService.getOneUser(usersId);
     }
 
-    /*
-    @GetMapping(path = "/loggedIn")
-    public String currentUserName(Principal principal) {
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-    }*/
-
     @PostMapping
     public void postUsers(@RequestBody Users users) {
         usersService.addNewUsers(users);
@@ -53,6 +51,13 @@ public class UsersController {
             @RequestParam(required = false) String email,
             @RequestParam(required = false) String password) {
                 usersService.updateUsers(usersId, email, password);
+    }
+
+    @GetMapping(path = "/loggedIn")
+    public UserDetails currentUserName(Principal principal) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        return userDetails;
     }
 
 }
