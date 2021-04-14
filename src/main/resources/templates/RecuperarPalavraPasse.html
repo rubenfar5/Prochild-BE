@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="utf-8" />
@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Recuperar Palavra-Passe</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/logos/LogoApp-small.png" />
+    <link rel="icon" type="image/x-icon" th:href="@{assets/img/logos/LogoApp-small.png}" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -58,8 +58,10 @@
                                         </div>
                                         <div class="text-center">
                                             <a class="small" href="Login.html">Já tem conta? Login!</a>
-                                        </div>
+
+
                                 </div>
+                                    </form>
                             </div>
                             <div class="col-lg-2"></div>
                         </div>
@@ -67,6 +69,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!------------------------------------------------------------------------------------------------------------------------------------>
