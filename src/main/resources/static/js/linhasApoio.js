@@ -53,7 +53,7 @@ function saveLinha() {
           title: "Sucesso",
           text: "Livro inserido com sucesso"
         }).then(function () {
-          window.location.href = "./MenuLinhasApoio.html";
+          window.location.href = "/menuLinhasApoio";
         })
       }
     })
@@ -134,7 +134,7 @@ function deleteLinha(id, nome) {
               title: "Sucesso",
               text: "Linha " + nome + "apagada com sucesso"
             }).then(function () {
-              window.location.href = "./MenuLinhasApoio.html";
+              window.location.href = "/menuLinhasApoio";
             })
           }
         })

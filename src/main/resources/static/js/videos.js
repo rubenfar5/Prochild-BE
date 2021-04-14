@@ -83,7 +83,7 @@ function saveVideo() {
           title: "Sucesso",
           text: "Vídeo inserido com sucesso"
         }).then(function () {
-          window.location.href = "./MenuVideos.html";
+          window.location.href = "/menuVideos";
         })
       }
     })
@@ -204,7 +204,7 @@ function deleteVideos(id, nome) {
               title: "Sucesso",
               text: "Livro " + nome + "apagado com sucesso"
             }).then(function () {
-              window.location.href = "./MenuVideos.html";
+              window.location.href = "/menuVideos";
             })
           }
         })

@@ -60,27 +60,27 @@
 
 function chooseTypeChild() {
     localStorage.setItem("type", "Child");
-    window.location.href = "./MenuEscolherIdade.html";
+    window.location.href = "/menuEscolherIdade";
 }
 
 function chooseTypeFamily() {
     localStorage.setItem("type", "Family");
-    window.location.href = "./LoginFamilias.html";
+    window.location.href = "/loginFamilias";
 }
 
 function chooseTypeInstitution() {
     localStorage.setItem("type", "Institution");
-    window.location.href = "./LoginInstituicoes.html";
+    window.location.href = "/loginInstituicoes";
 }
 
 function chooseTypeInstitution() {
     localStorage.setItem("type", "Admin");
-    window.location.href = "./LoginAdmin.html";
+    window.location.href = "/loginAdmin";
 }
 
 function moveOn() {
     if (localStorage.getItem("age") !== null && localStorage.getItem("gender") !== null) {
-        window.location.href = "./MenuPrincipal.html";
+        window.location.href = "/menuPrincipal";
     }
 }
 
@@ -120,13 +120,13 @@ function changeMainMenu() {
             document.getElementById("direitosbtn").setAttribute("href", "MenuDireitosCriancas.html");
         }
         document.getElementById("perfilbtn").remove();
-        document.getElementById("apoiosplace").innerHTML = '<a class="nav-link js-scroll-trigger" href="MenuSelecaoTipoInformacao.html"><i class="far fa-question-circle"></i> Ajudas</a>';
+        document.getElementById("apoiosplace").innerHTML = '<a class="nav-link js-scroll-trigger" href="menuSelecaoTipoInformacao"><i class="far fa-question-circle"></i> Ajudas</a>';
     }
     else if (localStorage.getItem("function") == "security") {
-        document.getElementById("apoiosplace").innerHTML = '<a class="nav-link js-scroll-trigger" href="MenuVerDenuncias.html"><i class="fas fa-shield-alt"></i> Denuncias</a>';
+        document.getElementById("apoiosplace").innerHTML = '<a class="nav-link js-scroll-trigger" href="menuVerDenuncias"><i class="fas fa-shield-alt"></i> Denuncias</a>';
     }
     else {
-        document.getElementById("apoiosplace").innerHTML = '<a class="nav-link js-scroll-trigger" href="MenuSelecaoTipoInformacao.html"><i class="far fa-question-circle"></i> Ajudas</a>';
+        document.getElementById("apoiosplace").innerHTML = '<a class="nav-link js-scroll-trigger" href="menuSelecaoTipoInformacao"><i class="far fa-question-circle"></i> Ajudas</a>';
     }
 }
 

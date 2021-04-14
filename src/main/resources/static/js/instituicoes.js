@@ -44,7 +44,7 @@ function saveInstitution() {
           title: "Sucesso",
           text: "Instituição inserida com sucesso"
         }).then(function () {
-          window.location.href = "./LoginInstituicoes.html";
+          window.location.href = "/loginInstituicoes";
         })
 
       }
@@ -98,7 +98,7 @@ function editDataInstitution() {
               title: "Sucesso",
               text: "Password alterada com sucesso"
             }).then(function () {
-              window.location.href = "./DadosPerfil.html";
+              window.location.href = "/dadosPerfil";
             })
 
           }
@@ -127,7 +127,7 @@ function editDataInstitution() {
           title: "Sucesso",
           text: "Dados alterados com sucesso"
         }).then(function () {
-          window.location.href = "./DadosPerfil.html";
+          window.location.href = "/dadosPerfil";
         })
 
       }
@@ -154,7 +154,7 @@ function editDataInstitution() {
           title: "Sucesso",
           text: "Dados alterados com sucesso"
         }).then(function () {
-          window.location.href = "./DadosPerfil.html";
+          window.location.href = "/dadosPerfil";
         })
 
       }
