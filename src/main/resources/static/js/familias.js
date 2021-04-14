@@ -50,7 +50,7 @@ function saveFamilia() {
                     text: "Conta criada com sucesso"
                 })
                     .then(function () {
-                        window.location.href = "./LoginFamilias.html";
+                        window.location.href = "/loginFamilias";
                     })
                 console.log("Success POST");
                 console.log(response);
@@ -104,7 +104,7 @@ function editDataFamily() {
                             title: "Sucesso",
                             text: "Password alterada com sucesso"
                         }).then(function () {
-                            window.location.href = "./DadosPerfil.html";
+                            window.location.href = "/dadosPerfil";
                         })
 
                     }
@@ -132,7 +132,7 @@ function editDataFamily() {
                     title: "Sucesso",
                     text: "Dados ao alterar dados"
                 }).then(function () {
-                    window.location.href = "./DadosPerfil.html";
+                    window.location.href = "/dadosPerfil";
                 })
 
             }
@@ -157,7 +157,7 @@ function editDataFamily() {
                     title: "Sucesso",
                     text: "Email alterado com sucesso"
                 }).then(function () {
-                    window.location.href = "./DadosPerfil.html";
+                    window.location.href = "/dadosPerfil";
                 })
 
             }

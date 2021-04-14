@@ -31,7 +31,7 @@ function login() {
           title: "Sucesso",
           text: "Login efetuado com sucesso"
         }).then(function () {
-          window.location.href = './MenuPrincipal.html';
+          window.location.href = '/menuPrincipal';
         })
       }
     })

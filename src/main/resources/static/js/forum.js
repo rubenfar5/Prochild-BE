@@ -61,7 +61,7 @@ function addDiscuss() {
                     title: "Sucesso",
                     text: "Discussão inserida com sucesso"
                 }).then(function () {
-                    window.location.href = "./MenuForum.html";
+                    window.location.href = "/menuForum";
                 })
             }
         })
@@ -105,7 +105,7 @@ function addDiscussChild() {
                     title: "Sucesso",
                     text: "Discussão inserida com sucesso"
                 }).then(function () {
-                    window.location.href = "./MenuForum.html";
+                    window.location.href = "/menuForum";
                 })
             }
         })
@@ -152,7 +152,7 @@ function answer(topico) {
                     title: "Sucesso",
                     text: "Resposta inserida com sucesso"
                 }).then(function () {
-                    window.location.href = "./MenuForum.html";
+                    window.location.href = "/menuForum;
                 })
             }
         })
@@ -196,7 +196,7 @@ function answerChild(topico) {
                     title: "Sucesso",
                     text: "Resposta inserida com sucesso"
                 }).then(function () {
-                    window.location.href = "./MenuForum.html";
+                    window.location.href = "/menuForum";
                 })
             }
         })
@@ -399,7 +399,7 @@ function deleteForum(params) {
                     title: "Sucesso",
                     text: "Tópico " + params + "apagado com sucesso"
                 }).then(function () {
-                    window.location.href = "./MenuForum.html";
+                    window.location.href = "/menuForum";
                 })
             }
         })

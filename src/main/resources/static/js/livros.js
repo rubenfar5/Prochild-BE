@@ -67,7 +67,7 @@ function saveLivro() {
           title: "Sucesso",
           text: "Livro inserido com sucesso"
         }).then(function () {
-          window.location.href = "./MenuLivros.html";
+          window.location.href = "/menuLivros";
         })
 
       }
@@ -200,7 +200,7 @@ function deleteLivros(id, nome) {
               title: "Sucesso",
               text: "Livro " + nome + "apagado com sucesso"
             }).then(function () {
-              window.location.href = "./MenuLivros.html";
+              window.location.href = "/menuLivros";
             })
           }
         })

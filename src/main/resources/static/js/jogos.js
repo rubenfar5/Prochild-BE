@@ -85,7 +85,7 @@ function saveJogo() {
           title: "Sucesso",
           text: "Vídeo inserido com sucesso"
         }).then(function () {
-          window.location.href = "./MenuJogos.html";
+          window.location.href = "/menuJogos";
         })
       }
     })
@@ -215,7 +215,7 @@ function deleteJogo(id, nome) {
               title: "Sucesso",
               text: "Jogo " + nome + "apagado com sucesso"
             }).then(function () {
-              window.location.href = "./MenuJogos.html";
+              window.location.href = "/menuJogos";
             })
           }
         })
