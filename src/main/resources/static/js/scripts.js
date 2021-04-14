@@ -117,7 +117,7 @@ function changeMainMenu() {
             if(localStorage.getItem("age") === "1" || localStorage.getItem("age") === "2"){
             document.getElementById("forumbtn").remove();
             }
-            document.getElementById("direitosbtn").setAttribute("href", "MenuDireitosCriancas.html");
+            document.getElementById("direitosbtn").setAttribute("href", "menuDireitosCriancas");
         }
         document.getElementById("perfilbtn").remove();
         document.getElementById("apoiosplace").innerHTML = '<a class="nav-link js-scroll-trigger" href="menuSelecaoTipoInformacao"><i class="far fa-question-circle"></i> Ajudas</a>';
