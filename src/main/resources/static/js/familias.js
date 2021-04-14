@@ -4,7 +4,7 @@ function saveFamilia() {
     let password = document.getElementById("PwdFamily").value;
     let repPwd = document.getElementById("PwdFamily2").value;
     data.email = document.getElementById("mailFamily").value;
-    data.tipo = "family";
+    data.tipo = "Family";
     data.nome = document.getElementById("nameFamily").value;
     if (document.getElementById("inlineRadio1").checked) {
         data.sexo = document.getElementById("inlineRadio1").value;

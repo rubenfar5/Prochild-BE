@@ -4,7 +4,7 @@ function saveInstitution() {
   data.email = document.getElementById("exampleInputEmail").value;
   let password = document.getElementById("InputPwd").value;
   let repPwd = document.getElementById("InputPwd2").value;
-  data.tipo = "institution";
+  data.tipo = "Institution";
   data.nome = document.getElementById("exampleFirstName").value;
   data.concelho = document.getElementById("InputConcelho").value;
   data.funcao = document.getElementById("InputFuncao").value;

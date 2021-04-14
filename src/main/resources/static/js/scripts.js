@@ -173,7 +173,7 @@ function perfil() {
         fetchFamilia();
         document.getElementById("editBTN").setAttribute("onclick", "editDataFamily()");
     }
-    if (localStorage.getItem("type") == "institution") {
+    if (localStorage.getItem("type") == "Institution") {
         fetchInstituicao();
         document.getElementById("editBTN").setAttribute("onclick", "editDataInstitution()");
     }

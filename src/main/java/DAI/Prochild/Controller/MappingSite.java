@@ -160,4 +160,11 @@ public class MappingSite {
     public String tictac() {
         return "tictac";
     }
+
+    @GetMapping("breakout")
+    public String breakout() {
+        return "breakout";
     }
+    }
+
+
