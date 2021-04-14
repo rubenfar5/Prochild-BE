@@ -43,8 +43,12 @@ public class TopicosService {
         if (topicosByNome.isPresent()) {
             throw new IllegalStateException("Este Tópico já existe");
         }
-
+        boolean exists = usersRepository.existsById(topicosRequest.getUsersId());
+        if (!exists) {
+            throw new IllegalStateException("User com id " + topicosRequest.getUsersId() + " não existe");
+        }
         Users user = usersRepository.findById(topicosRequest.getUsersId()).get();
+
 
         topicosRepository.save(new Topicos(
                 topicosRequest.getNome(),
