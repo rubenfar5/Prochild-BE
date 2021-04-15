@@ -216,6 +216,12 @@ function clearReloadDiscuss() {
     localStorage.removeItem("descMessage");
 }
 
+function erraseComplexComplain(){
+    if(localStorage.getItem("type") === "Child" && (localStorage.getItem("age") === "1" || localStorage.getItem("age") === "2")){
+        document.getElementById("complaitFormBtn").remove();
+    }
+}
+
 //---------------------------------------Botão para ir para o topo da página------------------------------------------------------------------------
 //Get the button
 var mybutton = document.getElementById("topBtn");
