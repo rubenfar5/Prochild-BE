@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 function login() {
   var myHeaders = new Headers();
 
@@ -14,7 +22,7 @@ function login() {
     mode: "no-cors"
   };
 
-  fetch("http://localhost:8080/prochild/login", requestOptions)
+  fetch("http://localhost:8080/loginFamilia", requestOptions)
     .then(function (response) {
       if (!response.ok) {
         console.log(response.status); //=> number 100–599
@@ -30,13 +38,14 @@ function login() {
           icon: "success",
           title: "Sucesso",
           text: "Login efetuado com sucesso"
-        }).then(function () {
+        })/*.then(function () {
+                      getDados();
+                  })*/.then(function () {
           window.location.href = '/menuPrincipal';
         })
       }
     })
-    .then(response => response.text())
-    .then(result => console.log(result))
+
     .catch(error => console.log('error', error));
 }
 
