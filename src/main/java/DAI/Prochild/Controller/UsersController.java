@@ -1,14 +1,16 @@
 package DAI.Prochild.Controller;
 
+import DAI.Prochild.Entity.Familias;
 import DAI.Prochild.Entity.Users;
 import DAI.Prochild.MailSender.SendEmailService;
+import DAI.Prochild.Service.FamiliasService;
 import DAI.Prochild.Service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import java.lang.reflect.Array;
 import java.security.Principal;
 import java.util.List;
 import java.util.Optional;
@@ -19,10 +21,12 @@ import java.util.Optional;
 public class UsersController {
 
     private final UsersService usersService;
+    private final FamiliasService familiasService;
 
     @Autowired
-    public UsersController(UsersService usersService, SendEmailService sendEmailService) {
+    public UsersController(UsersService usersService, SendEmailService sendEmailService, FamiliasService familiasService) {
         this.usersService = usersService;
+        this.familiasService = familiasService;
     }
 
     @GetMapping
@@ -54,9 +58,9 @@ public class UsersController {
     }
 
     @GetMapping(path = "/loggedIn")
-    public UserDetails currentUserName(Principal principal) {
+    public Users currentUserName(Principal principal) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        Users userDetails = (Users) authentication.getPrincipal();
         return userDetails;
     }
 
