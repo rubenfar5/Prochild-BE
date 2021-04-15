@@ -126,6 +126,9 @@ function changeMainMenu() {
     else if (localStorage.getItem("function") == "security") {
         document.getElementById("apoiosplace").innerHTML = '<a class="nav-link js-scroll-trigger" href="menuVerDenuncias"><i class="fas fa-shield-alt"></i> Denuncias</a>';
     }
+    else if(localStorage.getItem("type") == "Admin"){
+    document.getElementById("perfilbtn").remove();
+    }
     else {
         document.getElementById("apoiosplace").innerHTML = '<a class="nav-link js-scroll-trigger" href="menuSelecaoTipoInformacao"><i class="far fa-question-circle"></i> Ajudas</a>';
     }

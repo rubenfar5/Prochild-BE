@@ -3,7 +3,18 @@ function saveFamilia() {
     data.username = document.getElementById("usernameFamily").value;
     let password = document.getElementById("PwdFamily").value;
     let repPwd = document.getElementById("PwdFamily2").value;
-    data.email = document.getElementById("mailFamily").value;
+    function validateEmail(email)
+        {
+            var re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            return re.test(email);
+        }
+    if(validateEmail(document.getElementById("mailFamily").value)){
+        data.email = document.getElementById("mailFamily").value;
+    }else{
+    alert("mail wrong");
+    return false;
+    }
+
     data.tipo = "Family";
     data.nome = document.getElementById("nameFamily").value;
     if (document.getElementById("inlineRadio1").checked) {

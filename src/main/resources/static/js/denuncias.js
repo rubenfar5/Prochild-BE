@@ -1,9 +1,8 @@
 
 let isAdmin = false;
 
-function pagAdmin() {
+function pagAdmin(){
     isAdmin = true;
-    console.log("é a pag admin");
 }
 
 //funcao que faz get de todas as denuncias e coloca na tabela

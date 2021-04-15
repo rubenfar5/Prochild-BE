@@ -1,10 +1,9 @@
 let forum;
 let messages;
-let isAdmin = false;
 let answerFunction = "answer";
-function pagAdmin() {
-    isAdmin = true;
-   
+let isItAdmin = false;
+function checkAdminPag() {
+    isItAdmin = true;
 }
 
 function isChild() {
@@ -202,10 +201,9 @@ function fetchForum() {
         forum = await response.json()
         console.log(forum);
         console.log(forum.length);
-        if (isAdmin) {
+        if (isItAdmin) {
             document.getElementById("totalTopicos").innerHTML = forum.length;
-        }
-        else {
+        }else {
             show();
         }
     }
@@ -221,7 +219,7 @@ function fetchMessages() {
         console.log(messages);
         console.log(messages.length);
         console.log(isAdmin);
-        /*if(isAdmin){
+        /*if(isItAdmin){
             document.getElementById("totalTopicos").innerHTML = messages.length;
             console.log("ola0");
         }
