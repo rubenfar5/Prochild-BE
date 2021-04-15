@@ -72,5 +72,13 @@ public class FamiliasService {
         return familiasRepository.findById(familiasId);
     }
 
+    public Optional<Familias> getFamiliaById(Long familiasId) {
+        boolean exists = familiasRepository.existsById(familiasId);
+        if (!exists) {
+            throw new IllegalStateException("Familia com id " + familiasId + " não existe");
+        }
+
+        return familiasRepository.findById(familiasId);
+    }
 }
 
