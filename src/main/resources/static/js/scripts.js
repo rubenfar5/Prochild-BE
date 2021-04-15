@@ -137,11 +137,11 @@ function changeProfileMenu() {
     }
 }
 
-/*function changeLinhasApoio(){
-    if(localStorage.getItem("type") !== "child"){
+function erraseFormBtn(){
+    if(localStorage.getItem("type") !== "Child"){
         document.getElementById("formComplaint").remove();
     }
-}*/
+}
 
 /*-----------------------------------------------------------------------------------------------*/
 function editAssets() {
