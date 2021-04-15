@@ -1,9 +1,30 @@
 
+let dados = true;
 
-
-
-
-
+function getDados() {
+  async function fetchAsync() {
+    const response = await fetch("http://localhost:8080/prochild/users/loggedIn");
+    user = await response.json()
+    console.log(user);
+    localStorage.setItem("loggedIn", user.id);
+    localStorage.setItem("tipo", user.tipo);
+    if (localStorage.getItem("type") == "Family") {
+    const response1 = await fetch("http://localhost:8080/prochild/users/familias/dados/" + user.id);
+    familia = await response1.json();
+    console.log(familia);
+    localStorage.setItem("id", familia.id);
+    }
+    if (localStorage.getItem("type") == "Institution") {
+    const response2 = await fetch("http://localhost:8080/prochild/users/instituicoes/dados/" + user.id);
+    instituicao = await response2.json();
+    localStorage.setItem("id", instituicao.id);
+    localStorage.setItem("function", instituicao.funcao);
+    }
+  }
+  fetchAsync()
+    .then((data) => console.log("ok"))
+    .catch((reason) => console.log(reason.message));
+}
 
 
 function login() {
@@ -18,8 +39,7 @@ function login() {
     method: 'POST',
     headers: myHeaders,
     body: formdata,
-    redirect: 'follow',
-    mode: "no-cors"
+    redirect: 'follow'
   };
 
   fetch("http://localhost:8080/loginFamilia", requestOptions)
@@ -34,13 +54,12 @@ function login() {
           text: "Falha ao efetuar Login"
         })
       } else {
+        getDados();
         swal.fire({
           icon: "success",
           title: "Sucesso",
           text: "Login efetuado com sucesso"
-        })/*.then(function () {
-                      getDados();
-                  })*/.then(function () {
+        }).then(function () {
           window.location.href = '/menuPrincipal';
         })
       }

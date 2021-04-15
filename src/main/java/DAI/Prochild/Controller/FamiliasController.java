@@ -6,6 +6,7 @@ import DAI.Prochild.Service.FamiliasService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+
 import java.util.List;
 import java.util.Optional;
 
@@ -39,6 +40,19 @@ public class FamiliasController {
             @RequestParam(required = false) String nome,
             @RequestParam(required = false) String concelho) {
         familiasService.updateFamilias(familiasId, nome, concelho);
+    }
+
+    @GetMapping(path = "dados/{id}")
+    public Familias ola(@PathVariable("id") Long id) {
+        List<Familias> familias = familiasService.getFamilias();
+        Familias familia = new Familias();
+        for(int i=0; i<familias.size(); i++) {
+            familia = familias.get(i);
+            if(familia.getUsersId().getId() == id) {
+                break;
+            }
+        }
+        return familia;
     }
 }
 

@@ -87,7 +87,7 @@ function editDataFamily() {
             pass = password;
 
             //nestas tem de ser o id do UsersId
-            fetch(`http://localhost:8080/prochild/users/1?password=${pass}`, requestOptions)
+            fetch("http://localhost:8080/prochild/users/" + localStorage.getItem("loggedIn") + "?password=" + pass, requestOptions)
                 .then(function (response) {
                     if (!response.ok) {
                         console.log(response.status); //=> number 100–599
@@ -115,7 +115,7 @@ function editDataFamily() {
     }
 
 
-    fetch(`http://localhost:8080/prochild/users/familias/1?concelho=${document.getElementById("inputConcelho").value}&nome=${document.getElementById("inputNome").value}`, requestOptions)
+    fetch("http://localhost:8080/prochild/users/familias/"+ localStorage.getItem("id") + "?concelho=" + document.getElementById("inputConcelho").value + "&nome=" + document.getElementById("inputNome").value, requestOptions)
         .then(function (response) {
             if (!response.ok) {
                 console.log(response.status); //=> number 100–599
@@ -140,7 +140,7 @@ function editDataFamily() {
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
     //nestas tem de ser o id do UsersId
-    fetch(`http://localhost:8080/prochild/users/1?email=${document.getElementById("inputEmail").value}`, requestOptions)
+    fetch("http://localhost:8080/prochild/users/" + localStorage.getItem("loggedIn") + "?email=" + document.getElementById("inputEmail").value , requestOptions)
         .then(function (response) {
             if (!response.ok) {
                 console.log(response.status); //=> number 100–599
@@ -166,9 +166,9 @@ function editDataFamily() {
         .catch(error => console.log('error', error));
 }
 
-function fetchFamilia(/*id*/) {
+function fetchFamilia() {
     async function fetchAsync() {
-        const response = await fetch(`http://localhost:8080/prochild/users/familias/1`);
+        const response = await fetch("http://localhost:8080/prochild/users/familias/" + localStorage.getItem("id"));
         var data = await response.json();
         document.getElementById("inputNome").setAttribute("value", data.nome);
         document.getElementById("inputEmail").setAttribute("value", data.usersId.email);

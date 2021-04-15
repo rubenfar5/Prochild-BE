@@ -111,22 +111,7 @@ function clearLocalStorage() {
     localStorage.clear();
 }
 
-function getDados() {
-  async function fetchAsync() {
-    const response = await fetch("http://localhost:8080/prochild/users/loggedIn");
-    Cona = await response.json()
-    console.log(Cona);
-    localStorage.setItem("loggedIn", livros.id);
-    localStorage.setItem("tipo", livros.tipo);
-  }
-  fetchAsync()
-    .then((data) => console.log("ok"))
-    .catch((reason) => console.log(reason.message));
-}
-
 function changeMainMenu() {
-    getDados();
-    console.log(localStorage.getItem("loggedIn"))
 
     if (localStorage.getItem("type") == "Child") {
         if (localStorage.getItem("age") === "1" || localStorage.getItem("age") === "2" || localStorage.getItem("age") === "3") {
@@ -207,7 +192,7 @@ function garbage() {
     let btns = document.getElementsByName("garbage");
     console.log("ola");
     for (n = 0; n < btns.length; n++) {
-        if (localStorage.getItem("type") === "Admin" || localStorage.getItem("LoggedIn") == btns[n].getAttribute("id")) {
+        if (localStorage.getItem("type") === "Admin" || localStorage.getItem("loggedIn") == btns[n].getAttribute("id")) {
             btns[n].style.display = "";
             console.log(btns[n].getAttribute("id"));
         }

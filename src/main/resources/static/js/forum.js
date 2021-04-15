@@ -29,7 +29,7 @@ function addDiscuss() {
     let data = {};
     data.nome = document.getElementById("novaDiscussaoTitulo").value;
     data.descricao = document.getElementById("novaDiscussaoTexto").value;
-    data.usersId = "1";
+    data.usersId = localStorage.getItem("loggedIn");
     console.log(data);
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -119,7 +119,7 @@ function addDiscussChild() {
 function answer(topico) {
     let data = {};
     data.conteudo = document.getElementById("novaMensagem").value;
-    data.usersId = "1";
+    data.usersId = localStorage.getItem("loggedIn");
     data.topicosId = topico;
     console.log(data);
     var myHeaders = new Headers();
@@ -208,7 +208,7 @@ function answerChild(topico) {
 
 function fetchForum() {
     async function fetchAsync() {
-        const response = await fetch(`http://localhost:8080/prochild/topicos`);
+        const response = await fetch("http://localhost:8080/prochild/topicos");
         forum = await response.json()
         console.log(forum);
         console.log(forum.length);
@@ -226,7 +226,7 @@ function fetchForum() {
 
 function fetchMessages() {
     async function fetchAsync() {
-        const response = await fetch(`http://localhost:8080/prochild/mensagens`);
+        const response = await fetch("http://localhost:8080/prochild/mensagens");
         messages = await response.json()
         console.log(messages);
         console.log(messages.length);

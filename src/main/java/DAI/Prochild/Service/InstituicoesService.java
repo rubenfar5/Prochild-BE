@@ -1,6 +1,5 @@
 package DAI.Prochild.Service;
 
-import DAI.Prochild.Entity.Familias;
 import DAI.Prochild.Entity.Instituicoes;
 import DAI.Prochild.Entity.Users;
 import DAI.Prochild.Repository.InstituicoesRepository;
@@ -23,12 +22,14 @@ public class InstituicoesService {
     public List<Instituicoes> getInstituicoes() { return  instituicoesRepository.findAll();}
 
     public Users addNewInstituicoes(InstituicoesRequest instituicoesRequest) {
+
         Users user = usersService.addNewUsers(new Users(
                 instituicoesRequest.getUsername(),
                 instituicoesRequest.getEmail(),
                 instituicoesRequest.getPassword(),
                 instituicoesRequest.getTipo()
         ));
+
         instituicoesRepository.save(new Instituicoes(
                 instituicoesRequest.getNome(),
                 instituicoesRequest.getConcelho(),

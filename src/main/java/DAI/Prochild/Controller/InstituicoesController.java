@@ -37,4 +37,17 @@ public class InstituicoesController {
             @RequestParam(required = false) String concelho) {
         instituicoesService.updateInstituicoes(instituicoesId, nome, concelho);
     }
+
+    @GetMapping(path = "dados/{id}")
+    public Instituicoes ola(@PathVariable("id") Long id) {
+        List<Instituicoes> instituicoes = instituicoesService.getInstituicoes();
+        Instituicoes insti = new Instituicoes();
+        for(int i=0; i<instituicoes.size(); i++) {
+            insti = instituicoes.get(i);
+            if(insti.getUsersId().getId() == id) {
+                break;
+            }
+        }
+        return insti;
+    }
 }
