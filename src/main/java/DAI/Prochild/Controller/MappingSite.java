@@ -4,22 +4,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(maxAge = 3600)
 @Controller
 @RequestMapping("/")
 public class MappingSite {
 
-
-    @GetMapping("/")
-    public String index() {
-        return "MenuEscolherPerfil";
-    }
-
     @GetMapping("menuEscolherPerfil")
     public String escolherPerfil() {
-        return "MenuEscolherPerfil";
+        return "index";
     }
 
     @GetMapping("loginAdmin")
@@ -69,7 +62,7 @@ public class MappingSite {
 
     @GetMapping("dashboard")
     public String dashboard() {
-        return "index";
+        return "Dashboard";
     }
 
     @GetMapping("menuApoiosFamiliares")
