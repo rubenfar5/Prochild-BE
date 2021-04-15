@@ -11,6 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class MappingSite {
 
+
+    @GetMapping("/")
+    public String index() {
+        return "MenuEscolherPerfil";
+    }
+
     @GetMapping("menuEscolherPerfil")
     public String escolherPerfil() {
         return "MenuEscolherPerfil";
