@@ -61,7 +61,7 @@ public class MappingSite {
         return "FormularioDenuncias";
     }
 
-    @GetMapping("Dashboard")
+    @GetMapping("dashboard")
     public String dashboard() {
         return "index";
     }

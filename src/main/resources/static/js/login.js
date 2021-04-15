@@ -7,7 +7,7 @@ function getDados() {
     user = await response.json()
     console.log(user);
     localStorage.setItem("loggedIn", user.id);
-    localStorage.setItem("tipo", user.tipo);
+    localStorage.setItem("type", user.tipo);
     if (localStorage.getItem("type") == "Family") {
     const response1 = await fetch("http://localhost:8080/prochild/users/familias/dados/" + user.id);
     familia = await response1.json();
