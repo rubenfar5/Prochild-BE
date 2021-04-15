@@ -67,7 +67,7 @@ public class MappingSite {
 
     @GetMapping("menuApoiosFamiliares")
     public String menuFamiliares() {
-        return "MenuApoisFamiliares";
+        return "MenuApoiosFamiliares";
     }
 
     @GetMapping("menuDireitos")
@@ -112,7 +112,7 @@ public class MappingSite {
 
     @GetMapping("menuLivros")
     public String menuLivros() {
-        return "MenuLivro";
+        return "MenuLivros";
     }
 
     @GetMapping("menuSelecaoTipoInformacao")

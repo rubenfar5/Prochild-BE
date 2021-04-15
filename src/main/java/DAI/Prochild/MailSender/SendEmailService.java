@@ -69,7 +69,7 @@ public class SendEmailService {
         user.setPassword(encodedPassword);
         System.out.println(user + "USER mais pass");
         usersRepository.save(user);
-        simpleMailMessage.setText("A sua password foi alterada para: " + sb.toString() + "\nPor favor, assim que faça login, dirija-se ao Editar Perfil e mude a Password");
+        simpleMailMessage.setText("A sua password foi alterada para: " + sb.toString() + "\nPor favor, assim que faça login, dirija-se ao ->Perfil->alterar Password, após isso escolha uma password do seu agrado! ");
         javaMailSender.send(simpleMailMessage);
         System.out.println("sent email...");
     }
