@@ -1,5 +1,6 @@
 
 let dados = true;
+let proceed = false;
 
 function getDados() {
   async function fetchAsync() {
@@ -22,6 +23,9 @@ function getDados() {
     }
   }
   fetchAsync()
+  .then(function () {
+            proceed = true;
+          })
     .then((data) => console.log("ok"))
     .catch((reason) => console.log(reason.message));
 }
@@ -55,13 +59,23 @@ function login() {
         })
       } else {
         getDados();
+        if(proceed){
         swal.fire({
           icon: "success",
           title: "Sucesso",
           text: "Login efetuado com sucesso"
         }).then(function () {
           window.location.href = '/menuPrincipal';
-        })
+        })}else{
+        setTimeout(function(){swal.fire({
+                                icon: "success",
+                                title: "Sucesso",
+                                text: "Login efetuado com sucesso"
+                                }).then(function () {
+                                window.location.href = '/menuPrincipal';})
+
+        }, 500);
+        }
       }
     })
 

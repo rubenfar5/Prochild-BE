@@ -11,10 +11,15 @@ function saveFamilia() {
     if(validateEmail(document.getElementById("mailFamily").value)){
         data.email = document.getElementById("mailFamily").value;
     }else{
-    alert("mail wrong");
-    return false;
+    swal.fire({
+    icon: "error",
+    title: "Erro",
+    text: "O email está errado!"
+    }).then(function () {
+              return false;
+                                });
     }
-
+data.sexo = "";
     data.tipo = "Family";
     data.nome = document.getElementById("nameFamily").value;
     if (document.getElementById("inlineRadio1").checked) {
@@ -24,11 +29,23 @@ function saveFamilia() {
         data.sexo = document.getElementById("inlineRadio2").value;
     }
     data.concelho = document.getElementById("countyFamily").value;
-    if (password === "" || repPwd === "") {
+    if (password === "" || repPwd === "" || data.username === "" || data.nome === "" || data.sexo === "") {
+    swal.fire({
+    icon: "error",
+    title: "Erro",
+    text: "Preencha todos os campos"
+    }).then(function () {
         return false;
+                          });
     }
     else if (password !== repPwd) {
-        return false;
+    swal.fire({
+        icon: "error",
+        title: "Erro",
+        text: "Password e Confirmar Password não são iguais"
+        }).then(function () {
+                  return false;
+                                    });
     }
     else {
         data.password = password;
@@ -86,13 +103,33 @@ function editDataFamily() {
         method: 'PUT',
         redirect: 'follow'
     };
-
+if (data.nome === "" || data.sexo === "") {
+               swal.fire({
+                   icon: "error",
+                   title: "Erro",
+                   text: "Preencha o campo Password e Confirmar Password"
+                   }).then(function () {
+                       return false;
+                                         });
+            }
     if (isOn != "display: none;") {
         if (password === "" || repPwd === "") {
-            return false;
+           swal.fire({
+               icon: "error",
+               title: "Erro",
+               text: "Preencha o campo Password e Confirmar Password"
+               }).then(function () {
+                   return false;
+                                     });
         }
         else if (password !== repPwd) {
-            return false;
+           swal.fire({
+                   icon: "error",
+                   title: "Erro",
+                   text: "Password e Confirmar Password não são iguais"
+                   }).then(function () {
+                             return false;
+                                               });
         }
         else {
             pass = password;
@@ -141,7 +178,7 @@ function editDataFamily() {
                 swal.fire({
                     icon: "success",
                     title: "Sucesso",
-                    text: "Dados ao alterar dados"
+                    text: "Dados alterados com sucesso"
                 }).then(function () {
                     window.location.href = "/dadosPerfil";
                 })
@@ -187,7 +224,6 @@ function fetchFamilia() {
         document.getElementById("inputUsername").setAttribute("value", data.usersId.username);
         console.log(data.usersId.password);
 
-        //document.href = "#detalhes-denuncias";
     }
     fetchAsync()
         .then((data) => console.log("ok"))

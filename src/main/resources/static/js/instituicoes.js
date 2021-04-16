@@ -1,7 +1,24 @@
 function saveInstitution() {
   var data = {};
   data.username = document.getElementById("inputUsername").value;
-  data.email = document.getElementById("exampleInputEmail").value;
+
+  function validateEmail(email)
+          {
+              var re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+              return re.test(email);
+          }
+   if(validateEmail(document.getElementById("exampleInputEmail").value)){
+           data.email = document.getElementById("exampleInputEmail").value;
+       }else{
+       swal.fire({
+       icon: "error",
+       title: "Erro",
+       text: "O email está errado!"
+       }).then(function () {
+                 return false;
+                                   });
+       }
+
   let password = document.getElementById("InputPwd").value;
   let repPwd = document.getElementById("InputPwd2").value;
   data.tipo = "Institution";
@@ -9,15 +26,27 @@ function saveInstitution() {
   data.concelho = document.getElementById("InputConcelho").value;
   data.funcao = document.getElementById("InputFuncao").value;
 
-  if (password === "" || repPwd === "") {
-    return false;
-  }
-  else if (password !== repPwd) {
-    return false;
-  }
-  else {
-    data.password = password;
-  }
+  if (password === "" || repPwd === "" || data.username === "" || data.nome === "" || data.funcao === "" || data.concelho === "" ) {
+      swal.fire({
+      icon: "error",
+      title: "Erro",
+      text: "Preencha o campo Password e Confirmar Password"
+      }).then(function () {
+          return false;
+                            });
+      }
+      else if (password !== repPwd) {
+      swal.fire({
+          icon: "error",
+          title: "Erro",
+          text: "Password e Confirmar Password não são iguais"
+          }).then(function () {
+                    return false;
+                                      });
+      }
+      else {
+          data.password = password;
+      }
   console.log(data); //debugging para ver os dados que foram enviados
 
   //chamada fetch para envio dos dados para o servior via POST
@@ -68,14 +97,34 @@ function editDataInstitution() {
     method: 'PUT',
     redirect: 'follow'
   };
-
+if (data.nome === "" || data.funcao === "" || data.concelho === "" ) {
+               swal.fire({
+                   icon: "error",
+                   title: "Erro",
+                   text: "Preencha o campo Password e Confirmar Password"
+                   }).then(function () {
+                       return false;
+                                         });
+            }
   if (isOn != "display: none;") {
     if (password === "" || repPwd === "") {
-      return false;
-    }
-    else if (password !== repPwd) {
-      return false;
-    }
+               swal.fire({
+                   icon: "error",
+                   title: "Erro",
+                   text: "Preencha o campo Password e Confirmar Password"
+                   }).then(function () {
+                       return false;
+                                         });
+            }
+            else if (password !== repPwd) {
+               swal.fire({
+                       icon: "error",
+                       title: "Erro",
+                       text: "Password e Confirmar Password não são iguais"
+                       }).then(function () {
+                                 return false;
+                                                   });
+            }
     else {
       console.log("ta a qui");
       pass = password;
