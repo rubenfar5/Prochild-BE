@@ -94,6 +94,9 @@ function editDataFamily() {
     let pass;
     let btns = document.getElementsByName("pass");
     let isOn;
+    let nome = document.getElementById("inputNome").value;
+    let email = document.getElementById("inputEmail").value;
+    let concelho = document.getElementById("inputConcelho").value;
     for (n = 0; n < btns.length; n++) {
         isOn = btns[n].getAttribute("style");
     }
@@ -103,11 +106,11 @@ function editDataFamily() {
         method: 'PUT',
         redirect: 'follow'
     };
-if (data.nome === "" || data.sexo === "") {
+if (nome === "" || concelho === "" || email === "") {
                swal.fire({
                    icon: "error",
                    title: "Erro",
-                   text: "Preencha o campo Password e Confirmar Password"
+                   text: "Preencha todos os campos"
                    }).then(function () {
                        return false;
                                          });
@@ -163,7 +166,7 @@ if (data.nome === "" || data.sexo === "") {
     }else{
 
 
-    fetch("http://localhost:8080/prochild/users/familias/"+ localStorage.getItem("id") + "?concelho=" + document.getElementById("inputConcelho").value + "&nome=" + document.getElementById("inputNome").value, requestOptions)
+    fetch("http://localhost:8080/prochild/users/familias/"+ localStorage.getItem("id") + "?concelho=" + concelho + "&nome=" + nome , requestOptions)
         .then(function (response) {
             if (!response.ok) {
                 console.log(response.status); //=> number 100–599
@@ -188,7 +191,7 @@ if (data.nome === "" || data.sexo === "") {
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
     //nestas tem de ser o id do UsersId
-    fetch("http://localhost:8080/prochild/users/" + localStorage.getItem("loggedIn") + "?email=" + document.getElementById("inputEmail").value , requestOptions)
+    fetch("http://localhost:8080/prochild/users/" + localStorage.getItem("loggedIn") + "?email=" + email , requestOptions)
         .then(function (response) {
             if (!response.ok) {
                 console.log(response.status); //=> number 100–599

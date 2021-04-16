@@ -186,9 +186,14 @@ function perfil() {
 
 function editPass() {
     let btns = document.getElementsByName("pass");
+    let btnsOthers = document.getElementsByName("others");
+
     for (n = 0; n < btns.length; n++) {
         btns[n].style.display = "";
     }
+    for (n = 0; n < btnsOthers.length; n++) {
+            btnsOthers[n].readOnly = true;
+        }
 }
 
 function garbage() {

@@ -88,6 +88,9 @@ function editDataInstitution() {
   let pass;
   let btns = document.getElementsByName("pass");
   let isOn;
+  let nome = document.getElementById("inputNome").value;
+  let concelho = document.getElementById("inputConcelho").value;
+  let email = document.getElementById("inputEmail").value;
   for (n = 0; n < btns.length; n++) {
     isOn = btns[n].getAttribute("style");
   }
@@ -97,11 +100,11 @@ function editDataInstitution() {
     method: 'PUT',
     redirect: 'follow'
   };
-if (data.nome === "" || data.funcao === "" || data.concelho === "" ) {
+if (nome === "" || email === "" || concelho === "" ) {
                swal.fire({
                    icon: "error",
                    title: "Erro",
-                   text: "Preencha o campo Password e Confirmar Password"
+                   text: "Preencha todos os campos"
                    }).then(function () {
                        return false;
                                          });
@@ -159,7 +162,7 @@ if (data.nome === "" || data.funcao === "" || data.concelho === "" ) {
 
   //verificar confirmação password
   //colocar id da instituicao
-  fetch("http://localhost:8080/prochild/users/instituicoes/" + localStorage.getItem("id") + "?concelho=" + document.getElementById("inputConcelho").value + "&nome=" + document.getElementById("inputNome").value, requestOptions)
+  fetch("http://localhost:8080/prochild/users/instituicoes/" + localStorage.getItem("id") + "?concelho=" + concelho + "&nome=" + nome , requestOptions)
     .then(function (response) {
       if (!response.ok) {
         console.log(response.status); //=> number 100–599
@@ -184,7 +187,7 @@ if (data.nome === "" || data.funcao === "" || data.concelho === "" ) {
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
 
-  fetch("http://localhost:8080/prochild/users/" + localStorage.getItem("loggedIn") + "?email=" + document.getElementById("inputEmail").value, requestOptions)
+  fetch("http://localhost:8080/prochild/users/" + localStorage.getItem("loggedIn") + "?email=" + email , requestOptions)
     .then(function (response) {
       if (!response.ok) {
         console.log(response.status); //=> number 100–599
