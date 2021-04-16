@@ -146,6 +146,16 @@ function saveDenuncia() {
 
 
 function postDenuncia1() {
+ swal.fire({
+    icon: "warning",
+    title: "Submeter denúncia?",
+    text: "Deseja enviar uma denúncia com a mensagem \"Violência verbal entre Pais\"?"
+    showCancelButton: true,
+    confirmButtonText: 'Sim, Submeter!',
+    cancelButtonText: "Cancelar",
+    showLoaderOnConfirm: true,
+    preConfirm: () => {
+
     var data = {};
     data.sexo = localStorage.getItem("gender");
     data.faixa_etaria = localStorage.getItem("age");
@@ -186,8 +196,20 @@ function postDenuncia1() {
             console.error(err);
         });
 }
+})
+}
 
 function postDenuncia2() {
+swal.fire({
+    icon: "warning",
+    title: "Submeter denúncia?",
+    text: "Deseja enviar uma denúncia com a mensagem \"Violência física entre Pais\"?"
+    showCancelButton: true,
+    confirmButtonText: 'Sim, Submeter!',
+    cancelButtonText: "Cancelar",
+    showLoaderOnConfirm: true,
+    preConfirm: () => {
+
     var data = {};
     data.sexo = localStorage.getItem("gender");
     data.faixa_etaria = localStorage.getItem("age");
@@ -228,8 +250,19 @@ function postDenuncia2() {
             console.error(err);
         });
 }
+})
+}
 
 function postDenuncia3() {
+swal.fire({
+    icon: "warning",
+    title: "Submeter denúncia?",
+    text: "Deseja enviar uma denúncia com a mensagem \"Violência com Filhos\"?"
+    showCancelButton: true,
+    confirmButtonText: 'Sim, Submeter!',
+    cancelButtonText: "Cancelar",
+    showLoaderOnConfirm: true,
+    preConfirm: () => {
     var data = {};
     data.sexo = localStorage.getItem("gender");
     data.faixa_etaria = localStorage.getItem("age");
@@ -269,4 +302,6 @@ function postDenuncia3() {
             alert("Submission error");
             console.error(err);
         });
+}
+})
 }

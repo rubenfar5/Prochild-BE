@@ -216,6 +216,21 @@ function clearReloadDiscuss() {
     localStorage.removeItem("descMessage");
 }
 
+function logout() {
+swal.fire({
+    icon: "warning",
+    title: "Logout",
+    text: "Deseja efetuar Logout da Aplicação HappyChild?",
+    showCancelButton: true,
+    confirmButtonText: 'Sim, Logout!',
+    cancelButtonText: "Cancelar",
+    showLoaderOnConfirm: true,
+    preConfirm: () => {
+        window.location.href="menuEscolherPerfil";
+    }
+    })
+}
+
 //---------------------------------------Botão para ir para o topo da página------------------------------------------------------------------------
 //Get the button
 var mybutton = document.getElementById("topBtn");
@@ -236,3 +251,4 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
