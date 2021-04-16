@@ -53,7 +53,15 @@ function saveVideo() {
   data.nome = document.getElementById("inputName").value;
   data.descricao = tipo;
   data.link = getId(document.getElementById("inputVideo").value);
-
+if (data.descricao === "" || data.nome === "" || data.link === "") {
+          swal.fire({
+          icon: "error",
+          title: "Erro",
+          text: "Preencha todos os campos"
+          }).then(function () {
+              return false;
+                                });
+          }else{
   var myHeaders = new Headers();
   //myHeaders.append("Cookie", "JSESSIONID=B082F7E7ABE2EBF64420BBAB600DF404");
   myHeaders.append("Content-Type", "application/json");
@@ -90,7 +98,7 @@ function saveVideo() {
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
-
+}
 
 }
 function fetchVideos() {

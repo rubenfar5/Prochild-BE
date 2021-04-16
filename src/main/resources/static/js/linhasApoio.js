@@ -19,7 +19,15 @@ function saveLinha() {
   data.contacto = document.getElementById("contactoLinha").value;
   data.imagem = fileContent;
   data.link = document.getElementById("inputSite").value;
-
+if (data.contacto === "" || data.nome === "" || data.link === "" || data.imagem === null || data.imagem === "") {
+          swal.fire({
+          icon: "error",
+          title: "Erro",
+          text: "Preencha todos os campos"
+          }).then(function () {
+              return false;
+                                });
+          }else{
   console.log(data);
 
   var myHeaders = new Headers();
@@ -61,7 +69,7 @@ function saveLinha() {
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
 
-
+}
 }
 
 function fetchLinhas() {

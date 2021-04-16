@@ -87,8 +87,14 @@ function recuperarPassword() {
   myHeaders.append("Content-Type", "application/json");
 
   var data = {};
-  data.username = document.getElementById("inputUsername").value,
-    data.email = document.getElementById("inputEmail").value
+  data.username = document.getElementById("inputUsername").value;
+
+function validateEmail(email){
+            var re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            return re.test(email);
+        }
+    if(validateEmail(document.getElementById("inputEmail").value)){
+        data.email = document.getElementById("inputEmail").value;
 
   var requestOptions = {
     method: 'POST',
@@ -119,5 +125,14 @@ function recuperarPassword() {
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
+    }else{
+        swal.fire({
+        icon: "error",
+        title: "Erro",
+        text: "O email está errado!"
+        }).then(function () {
+                  return false;
+                                    });
+        }
 }
 

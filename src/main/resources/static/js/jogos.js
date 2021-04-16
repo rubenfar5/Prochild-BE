@@ -56,7 +56,17 @@ function saveJogo() {
   data.nome = document.getElementById("inputName").value;
   data.descricao = document.getElementById("inputDesc").value;
   data.regras = document.getElementById("inputRules").value;
+  data.imagem = "";
   data.imagem = fileContent;
+  if (data.descricao === "" || data.nome === "" || data.regras === "" || data.imagem === null || data.imagem === "") {
+          swal.fire({
+          icon: "error",
+          title: "Erro",
+          text: "Preencha todos os campos, o único opcional é o campo vídeo"
+          }).then(function () {
+              return false;
+                                });
+          }else{
   data.video = getId(document.getElementById("inputVideo").value);
 
   var myHeaders = new Headers();
@@ -93,7 +103,7 @@ function saveJogo() {
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
 
-
+}
 }
 
 

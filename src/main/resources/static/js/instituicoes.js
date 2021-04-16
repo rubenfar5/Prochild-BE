@@ -46,7 +46,7 @@ function saveInstitution() {
       }
       else {
           data.password = password;
-      }
+
   console.log(data); //debugging para ver os dados que foram enviados
 
   //chamada fetch para envio dos dados para o servior via POST
@@ -80,7 +80,7 @@ function saveInstitution() {
     })
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
-}
+}  }
 
 function editDataInstitution() {
   let password = document.getElementById("inputPassword").value;
@@ -105,7 +105,7 @@ if (data.nome === "" || data.funcao === "" || data.concelho === "" ) {
                    }).then(function () {
                        return false;
                                          });
-            }
+            }else{
   if (isOn != "display: none;") {
     if (password === "" || repPwd === "") {
                swal.fire({
@@ -155,7 +155,7 @@ if (data.nome === "" || data.funcao === "" || data.concelho === "" ) {
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
     }
-  }
+  }else{
 
   //verificar confirmação password
   //colocar id da instituicao
@@ -208,7 +208,7 @@ if (data.nome === "" || data.funcao === "" || data.concelho === "" ) {
     })
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
-}
+}}}
 
 function fetchInstituicao() {
   async function fetchAsync() {

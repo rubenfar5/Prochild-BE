@@ -18,6 +18,16 @@ function addDiscuss() {
     let data = {};
     data.nome = document.getElementById("novaDiscussaoTitulo").value;
     data.descricao = document.getElementById("novaDiscussaoTexto").value;
+
+    if (data.nome === "" || data.descricao === "") {
+    swal.fire({
+    icon: "error",
+    title: "Erro",
+    text: "Preencha todos os campos"
+    }).then(function () {
+        return false;
+                          });
+    }else{
     data.usersId = localStorage.getItem("loggedIn");
     console.log(data);
     var myHeaders = new Headers();
@@ -57,12 +67,22 @@ function addDiscuss() {
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
+        }
 }
 
 function addDiscussChild() {
     let data = {};
     data.nome = document.getElementById("novaDiscussaoTitulo").value;
     data.descricao = document.getElementById("novaDiscussaoTexto").value;
+    if (nome === "" || data.descricao === "") {
+        swal.fire({
+        icon: "error",
+        title: "Erro",
+        text: "Preencha todos os campos"
+        }).then(function () {
+            return false;
+                              });
+        }else{
     console.log(data);
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -102,12 +122,21 @@ function addDiscussChild() {
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
 
-
+}
 }
 
 function answer(topico) {
     let data = {};
     data.conteudo = document.getElementById("novaMensagem").value;
+    if (data.conteudo === "") {
+        swal.fire({
+        icon: "error",
+        title: "Erro",
+        text: "Preencha todos os campos"
+        }).then(function () {
+            return false;
+                              });
+        }else{
     data.usersId = localStorage.getItem("loggedIn");
     data.topicosId = topico;
     console.log(data);
@@ -148,11 +177,21 @@ function answer(topico) {
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
+        }
 }
 
 function answerChild(topico) {
     let data = {};
     data.conteudo = document.getElementById("novaMensagem").value;
+    if (data.conteudo === "") {
+            swal.fire({
+            icon: "error",
+            title: "Erro",
+            text: "Preencha todos os campos"
+            }).then(function () {
+                return false;
+                                  });
+            }else{
     data.topicosId = topico;
     console.log(data);
     var myHeaders = new Headers();
@@ -192,6 +231,7 @@ function answerChild(topico) {
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
+        }
 }
 
 

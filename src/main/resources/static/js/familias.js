@@ -49,7 +49,7 @@ data.sexo = "";
     }
     else {
         data.password = password;
-    }
+
 
     console.log(data); //debugging para ver os dados que foram enviados
 
@@ -86,7 +86,7 @@ data.sexo = "";
         })
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
-}
+} }
 
 function editDataFamily() {
     let password = document.getElementById("inputPassword").value;
@@ -111,7 +111,7 @@ if (data.nome === "" || data.sexo === "") {
                    }).then(function () {
                        return false;
                                          });
-            }
+            }else {
     if (isOn != "display: none;") {
         if (password === "" || repPwd === "") {
            swal.fire({
@@ -160,7 +160,7 @@ if (data.nome === "" || data.sexo === "") {
                 .then(result => console.log(result))
                 .catch(error => console.log('error', error));
         }
-    }
+    }else{
 
 
     fetch("http://localhost:8080/prochild/users/familias/"+ localStorage.getItem("id") + "?concelho=" + document.getElementById("inputConcelho").value + "&nome=" + document.getElementById("inputNome").value, requestOptions)
@@ -212,7 +212,7 @@ if (data.nome === "" || data.sexo === "") {
         })
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
-}
+}}}
 
 function fetchFamilia() {
     async function fetchAsync() {

@@ -41,7 +41,15 @@ function saveLivro() {
   var myHeaders = new Headers();
   //myHeaders.append("Cookie", "JSESSIONID=B082F7E7ABE2EBF64420BBAB600DF404");
   myHeaders.append("Content-Type", "application/json");
-
+if (data.descricao === "" || data.nome === "" || data.link === "" || data.link === null || data.capa === null || data.capa === "") {
+          swal.fire({
+          icon: "error",
+          title: "Erro",
+          text: "Preencha todos os campos, o único opcional é o campo vídeo"
+          }).then(function () {
+              return false;
+                                });
+          }else{
 
   var requestOptions = {
     method: 'POST',
@@ -74,7 +82,7 @@ function saveLivro() {
     })
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
-
+}
 }
 
 
