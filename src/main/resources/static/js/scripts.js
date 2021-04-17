@@ -124,7 +124,7 @@ function changeMainMenu() {
         document.getElementById("apoiosplace").innerHTML = '<a class="nav-link js-scroll-trigger" href="menuSelecaoTipoInformacao"><i class="far fa-question-circle"></i> Ajudas</a>';
     }
     else if (localStorage.getItem("function") == "security") {
-        document.getElementById("apoiosplace").innerHTML = '<a class="nav-link js-scroll-trigger" href="menuVerDenuncias"><i class="fas fa-shield-alt"></i> Denuncias</a>';
+        document.getElementById("apoiosplace").innerHTML = '<a class="nav-link js-scroll-trigger" href="menuVerDenuncias"><i class="fas fa-shield-alt"></i> Denúncias</a>';
     }
     else if(localStorage.getItem("type") == "Admin"){
     document.getElementById("perfilbtn").remove();
