@@ -47,8 +47,6 @@ function saveInstitution() {
       else {
           data.password = password;
 
-  console.log(data); //debugging para ver os dados que foram enviados
-
   //chamada fetch para envio dos dados para o servior via POST
   fetch('http://localhost:8080/prochild/users/instituicoes',
     {
@@ -94,7 +92,7 @@ function editDataInstitution() {
   for (n = 0; n < btns.length; n++) {
     isOn = btns[n].getAttribute("style");
   }
-  console.log(isOn);
+
 
   var requestOptions = {
     method: 'PUT',
@@ -129,9 +127,8 @@ if (nome === "" || email === "" || concelho === "" ) {
                                                    });
             }
     else {
-      console.log("ta a qui");
+
       pass = password;
-      console.log(pass);
       //nestas tem de ser o id do UsersId
       fetch("http://localhost:8080/prochild/users/" + localStorage.getItem("loggedIn") + "?password=" + pass, requestOptions)
         .then(function (response) {
@@ -223,7 +220,6 @@ function fetchInstituicao() {
     document.getElementById("inputUsername").setAttribute("value", data.usersId.username);
     document.getElementById("inputFuncao").setAttribute("value", data.funcao);
 
-    console.log(data.usersId.password);
   }
   fetchAsync()
     .then((data) => console.log("ok"))

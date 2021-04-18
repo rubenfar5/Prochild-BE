@@ -50,9 +50,6 @@ data.sexo = "";
     else {
         data.password = password;
 
-
-    console.log(data); //debugging para ver os dados que foram enviados
-
     //chamada fetch para envio dos dados para o servior via POST
     fetch('http://localhost:8080/prochild/users/familias',
         {
@@ -100,7 +97,6 @@ function editDataFamily() {
     for (n = 0; n < btns.length; n++) {
         isOn = btns[n].getAttribute("style");
     }
-    console.log(isOn);
 
     var requestOptions = {
         method: 'PUT',
@@ -225,7 +221,6 @@ function fetchFamilia() {
         document.getElementById("inputEmail").setAttribute("value", data.usersId.email);
         document.getElementById("inputConcelho").setAttribute("value", data.concelho);
         document.getElementById("inputUsername").setAttribute("value", data.usersId.username);
-        console.log(data.usersId.password);
 
     }
     fetchAsync()

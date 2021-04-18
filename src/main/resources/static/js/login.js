@@ -5,14 +5,12 @@ let proceed = false;
 function getDados() {
   async function fetchAsync() {
     const response = await fetch("http://localhost:8080/prochild/users/loggedIn");
-    user = await response.json()
-    console.log(user);
+    user = await response.json();
     localStorage.setItem("loggedIn", user.id);
     localStorage.setItem("type", user.tipo);
     if (localStorage.getItem("type") == "Family") {
     const response1 = await fetch("http://localhost:8080/prochild/users/familias/dados/" + user.id);
     familia = await response1.json();
-    console.log(familia);
     localStorage.setItem("id", familia.id);
     }
     if (localStorage.getItem("type") == "Institution") {

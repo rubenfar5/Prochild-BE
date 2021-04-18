@@ -15,8 +15,6 @@ async function getapi(url) {
 
     // Storing data in form of JSON
     var data = await response.json();
-    console.log(data);
-    console.log(data.length);
     if (isAdmin) {
         document.getElementById("totalDenuncias").innerHTML = data.length;
     }
@@ -77,8 +75,6 @@ function showDetails(id) {
         document.getElementById("sexoDenuncia").setAttribute("value", data.criancasId.sexo);
 
 
-        console.log(data.localizacao);
-
         document.href = "#detalhes-denuncias";
     }
     fetchAsync()
@@ -108,9 +104,6 @@ function saveDenuncia() {
     data.faixa_etaria = localStorage.getItem("age");
     data.localizacao = localizacao;
     data.acontecimento = document.getElementById("acontecimento").value;
-
-
-    console.log(data); //debugging para ver os dados que foram enviados
 
     //chamada fetch para envio dos dados para o servior via POST
     fetch('http://localhost:8080/prochild/denuncias',

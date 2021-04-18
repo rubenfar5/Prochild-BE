@@ -105,7 +105,6 @@ function fetchVideos() {
   async function fetchAsync() {
     const response = await fetch(`http://localhost:8080/prochild/videos`);
     videos = await response.json()
-    console.log(videos);
     showVideos();
 
   }

@@ -47,9 +47,7 @@ var slides = fotos1.length;
 let small;
 function pag() {
   small = true;
-  console.log("aqui");
   if(small){
-    console.log("oi");
     showSlides(slideIndex);
   }
 }

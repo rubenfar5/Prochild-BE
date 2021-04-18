@@ -16,7 +16,6 @@ var fotos1 =
 ];
 var slides = fotos1.length;
 showSlides(slideIndex);
-console.log(fotos1.length);
 
 
 // Next/previous controls

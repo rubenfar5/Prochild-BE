@@ -91,7 +91,6 @@ function fetchLivros() {
   async function fetchAsync() {
     const response = await fetch(`http://localhost:8080/prochild/livros`);
     livros = await response.json()
-    console.log(livros);
     showLivros();
 
   }

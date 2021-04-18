@@ -8,7 +8,6 @@ window.addEventListener("load", function () {
     var me = this;
     reader.onload = function () {
       fileContent = reader.result;
-      console.log(fileContent);
     }
   }
 });
@@ -28,10 +27,8 @@ if (data.contacto === "" || data.nome === "" || data.link === "" || data.imagem 
               return false;
                                 });
           }else{
-  console.log(data);
 
   var myHeaders = new Headers();
-  //myHeaders.append("Cookie", "JSESSIONID=B082F7E7ABE2EBF64420BBAB600DF404");
   myHeaders.append("Content-Type", "application/json");
 
 
@@ -65,7 +62,7 @@ if (data.contacto === "" || data.nome === "" || data.link === "" || data.imagem 
         })
       }
     })
-    .then(response => response.text())
+
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
 
@@ -76,7 +73,6 @@ function fetchLinhas() {
   async function fetchAsync() {
     const response = await fetch(`http://localhost:8080/prochild/linhasapoio`);
     linhas = await response.json()
-    console.log(linhas);
     showLinhas();
 
   }
@@ -146,7 +142,7 @@ function deleteLinha(id, nome) {
             })
           }
         })
-        .then(response => response.text())
+
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
     }

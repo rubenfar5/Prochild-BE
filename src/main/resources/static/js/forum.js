@@ -29,7 +29,6 @@ function addDiscuss() {
                           });
     }else{
     data.usersId = localStorage.getItem("loggedIn");
-    console.log(data);
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -83,7 +82,6 @@ function addDiscussChild() {
             return false;
                               });
         }else{
-    console.log(data);
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -139,7 +137,6 @@ function answer(topico) {
         }else{
     data.usersId = localStorage.getItem("loggedIn");
     data.topicosId = topico;
-    console.log(data);
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -193,7 +190,6 @@ function answerChild(topico) {
                                   });
             }else{
     data.topicosId = topico;
-    console.log(data);
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
@@ -239,8 +235,6 @@ function fetchForum() {
     async function fetchAsync() {
         const response = await fetch("http://localhost:8080/prochild/topicos");
         forum = await response.json()
-        console.log(forum);
-        console.log(forum.length);
         if (isItAdmin) {
             document.getElementById("totalTopicos").innerHTML = forum.length;
         }else {
@@ -292,7 +286,6 @@ function show() {
         let idOwner;
         if(forum[r].usersId === null){
             owner = "Criança";
-            console.log("ola"); 
             idOwner = "crianca";
         }else {
             owner = forum[r].usersId.username;
@@ -313,7 +306,6 @@ function show() {
 
       </tr>
   </tbody>`;
-        console.log(forum[r].descricao);
     }
     // Setting innerHTML as tab variable
     document.getElementById("discussTable").innerHTML = tab;
@@ -336,7 +328,7 @@ function showDetail(id, title, descricao) {
     </th>
 </thead>
 <tbody>`;
-    console.log(messages);
+
     for (let i = 0; i < messages.length; i++) {
         if (messages[i].topicosId.id == id) {
             let owner;
@@ -359,7 +351,6 @@ function showDetail(id, title, descricao) {
     }
     resp += `</tbody>`;
     document.getElementById("messageTable").innerHTML = resp;
-    console.log(id);
     document.getElementById("btnSendAnswer").setAttribute("onclick", `${answerFunction}(${id})`);
     window.location.href = "#messageTable";
 }
@@ -375,7 +366,6 @@ function deleteMessage(id) {
     var requestOptions = {
         method: 'DELETE',
     };
-    console.log(id);
     //selecionar o id do jogo selecionado
     for (let i = 0; i < messages.length; i++) {
         let message = messages[i].topicosId.id;

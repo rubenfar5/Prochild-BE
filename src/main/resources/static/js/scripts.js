@@ -198,11 +198,9 @@ function editPass() {
 
 function garbage() {
     let btns = document.getElementsByName("garbage");
-    console.log("ola");
     for (n = 0; n < btns.length; n++) {
         if (localStorage.getItem("type") === "Admin" || localStorage.getItem("loggedIn") == btns[n].getAttribute("id")) {
             btns[n].style.display = "";
-            console.log(btns[n].getAttribute("id"));
         }
     }
 }
