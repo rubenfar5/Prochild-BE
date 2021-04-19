@@ -234,7 +234,7 @@ function answerChild(topico) {
 function fetchForum() {
     async function fetchAsync() {
         const response = await fetch("http://localhost:8080/prochild/topicos");
-        forum = await response.json()
+        forum = await response.json();
         if (isItAdmin) {
             document.getElementById("totalTopicos").innerHTML = forum.length;
         }else {
@@ -249,17 +249,8 @@ function fetchForum() {
 function fetchMessages() {
     async function fetchAsync() {
         const response = await fetch("http://localhost:8080/prochild/mensagens");
-        messages = await response.json()
-        console.log(messages);
-        console.log(messages.length);
-        console.log(isAdmin);
-        /*if(isItAdmin){
-            document.getElementById("totalTopicos").innerHTML = messages.length;
-            console.log("ola0");
-        }
-        else{*/
+        messages = await response.json();
         reloadSame();
-        //}
 
     }
     fetchAsync()
@@ -286,11 +277,12 @@ function show() {
         let idOwner;
         if(forum[r].usersId === null){
             owner = "Criança";
+
             idOwner = "crianca";
         }else {
             owner = forum[r].usersId.username;
             idOwner = forum[r].usersId.id;
-        } 
+        }
         tab += `<tbody>
       <tr>
           <td>
@@ -306,6 +298,7 @@ function show() {
 
       </tr>
   </tbody>`;
+
     }
     // Setting innerHTML as tab variable
     document.getElementById("discussTable").innerHTML = tab;
@@ -336,7 +329,7 @@ function showDetail(id, title, descricao) {
             owner = "Criança";
         }else {
             owner = messages[i].usersId.username;
-        } 
+        }
             resp += `
             <tr>
                 <td>
