@@ -91,7 +91,7 @@ function saveJogo() {
         swal.fire({
           icon: "success",
           title: "Sucesso",
-          text: "Vídeo inserido com sucesso"
+          text: "Jogo inserido com sucesso"
         }).then(function () {
           window.location.href = "/menuJogos";
         })
