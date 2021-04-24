@@ -136,7 +136,7 @@ function deleteLinha(id, nome) {
             swal.fire({
               icon: "success",
               title: "Sucesso",
-              text: "Linha " + nome + "apagada com sucesso"
+              text: "Linha " + nome + " apagada com sucesso"
             }).then(function () {
               window.location.href = "/menuLinhasApoio";
             })

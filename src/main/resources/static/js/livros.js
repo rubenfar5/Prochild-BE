@@ -205,7 +205,7 @@ function deleteLivros(id, nome) {
             swal.fire({
               icon: "success",
               title: "Sucesso",
-              text: "Livro " + nome + "apagado com sucesso"
+              text: "Livro " + nome + " apagado com sucesso"
             }).then(function () {
               window.location.href = "/menuLivros";
             })
