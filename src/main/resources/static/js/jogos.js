@@ -91,7 +91,7 @@ function saveJogo() {
         swal.fire({
           icon: "success",
           title: "Sucesso",
-          text: "Vídeo inserido com sucesso"
+          text: "Jogo inserido com sucesso"
         }).then(function () {
           window.location.href = "/menuJogos";
         })
@@ -220,7 +220,7 @@ function deleteJogo(id, nome) {
             swal.fire({
               icon: "success",
               title: "Sucesso",
-              text: "Jogo " + nome + "apagado com sucesso"
+              text: "Jogo " + nome + " apagado com sucesso"
             }).then(function () {
               window.location.href = "/menuJogos";
             })

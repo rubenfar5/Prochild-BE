@@ -209,7 +209,7 @@ function deleteVideos(id, nome) {
             swal.fire({
               icon: "success",
               title: "Sucesso",
-              text: "Livro " + nome + "apagado com sucesso"
+              text: "Vídeo " + nome + " apagado com sucesso"
             }).then(function () {
               window.location.href = "/menuVideos";
             })

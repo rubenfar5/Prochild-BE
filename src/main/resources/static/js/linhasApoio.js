@@ -56,7 +56,7 @@ if (data.contacto === "" || data.nome === "" || data.link === "" || data.imagem 
         swal.fire({
           icon: "success",
           title: "Sucesso",
-          text: "Livro inserido com sucesso"
+          text: "Linha de Apoio inserido com sucesso"
         }).then(function () {
           window.location.href = "/menuLinhasApoio";
         })
@@ -136,7 +136,7 @@ function deleteLinha(id, nome) {
             swal.fire({
               icon: "success",
               title: "Sucesso",
-              text: "Linha " + nome + "apagada com sucesso"
+              text: "Linha " + nome + " apagada com sucesso"
             }).then(function () {
               window.location.href = "/menuLinhasApoio";
             })
