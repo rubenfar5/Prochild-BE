@@ -145,7 +145,7 @@ function showLivros() {
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-8">
-              <div class="modal-body">
+              <div class="modal-body row justify-content-center">
                 <h2 class="text-uppercase">${livros[i].nome}</h2>
                 <p class="item-intro text-muted">
                   ${livros[i].descricao}
@@ -155,7 +155,7 @@ function showLivros() {
                 </div>
                 <br>
                 <div align="center">
-                <iframe src="${livros[i].link}" class="responsive" style="width:800px; height:700px;" frameborder="0"></iframe>
+                <iframe src="${livros[i].link}" width="800px" height="700px" frameborder="0"></iframe>
                 </div>
                 <p></p>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
