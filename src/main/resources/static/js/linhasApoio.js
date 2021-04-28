@@ -56,7 +56,7 @@ if (data.contacto === "" || data.nome === "" || data.link === "" || data.imagem 
         swal.fire({
           icon: "success",
           title: "Sucesso",
-          text: "Linha de Apoio inserido com sucesso"
+          text: "Linha de Apoio inserida com sucesso"
         }).then(function () {
           window.location.href = "/menuLinhasApoio";
         })
