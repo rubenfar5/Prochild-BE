@@ -114,7 +114,7 @@ function showLivros() {
             <i class="fas fa-plus fa-3x"></i>
           </div>
         </div>
-        <img class="img-fluid" src="${livros[i].capa}" alt="" />
+        <img class="img-fluid" style="height: 200px; width: 200px;" src="${livros[i].capa}" alt="" />
       </a>
       <div class="portfolio-caption">
         <div class="portfolio-caption-heading">${livros[i].nome}</div>
