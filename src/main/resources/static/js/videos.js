@@ -143,7 +143,7 @@ function showVideos() {
               allowfullscreen></iframe>
               </div>
               <br>
-              <a class="btn btn-primary" onclick=deleteVideos(${videos[i].id}) style="display: none" name="editingbtn"><i class="far fa-trash-alt"></i></a>
+              <a class="btn btn-primary" onclick="deleteVideos(${videos[i].id}, '${videos[i].nome}')" style="display: none" name="editingbtn"><i class="far fa-trash-alt"></i></a>
         </div>`;
     } else if (videos[i].descricao === "Diversos") {
       coded = coded + `<div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
@@ -155,7 +155,7 @@ function showVideos() {
               allowfullscreen></iframe>
              </div>
              <br>
-             <a class="btn btn-primary" onclick=deleteVideos(${videos[i].id}) style="display: none" name="editingbtn"><i class="far fa-trash-alt"></i></a>
+             <a class="btn btn-primary" onclick="deleteVideos(${videos[i].id}, '${videos[i].nome}')" style="display: none" name="editingbtn"><i class="far fa-trash-alt"></i></a>
         </div>`;
     } else if (videos[i].descricao === "Games") {
       codeg = codeg + `<div class="col-lg-4 col-md-6 mb-4 justify-content-md-center">
@@ -167,7 +167,7 @@ function showVideos() {
               allowfullscreen></iframe>
               </div>
               <br>
-              <a class="btn btn-primary" onclick=deleteVideos(${videos[i].id}) style="display: none" name="editingbtn"><i class="far fa-trash-alt"></i></a>
+              <a class="btn btn-primary" onclick="deleteVideos(${videos[i].id}, '${videos[i].nome}')" style="display: none" name="editingbtn"><i class="far fa-trash-alt"></i></a>
         </div>`;
     }
 
