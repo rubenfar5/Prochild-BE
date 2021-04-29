@@ -408,7 +408,7 @@ function deleteForum(params) {
                 swal.fire({
                     icon: "success",
                     title: "Sucesso",
-                    text: "Tópico " + params + "apagado com sucesso"
+                    text: "Tópico " + params + " apagado com sucesso"
                 }).then(function () {
                     window.location.href = "/menuForum";
                 })
