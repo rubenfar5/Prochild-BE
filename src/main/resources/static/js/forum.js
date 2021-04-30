@@ -73,7 +73,7 @@ function addDiscussChild() {
     let data = {};
     data.nome = document.getElementById("novaDiscussaoTitulo").value;
     data.descricao = document.getElementById("novaDiscussaoTexto").value;
-    if (nome === "" || data.descricao === "") {
+    if (data.nome === "" || data.descricao === "") {
         swal.fire({
         icon: "error",
         title: "Erro",
