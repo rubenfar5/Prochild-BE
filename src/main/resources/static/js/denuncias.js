@@ -71,8 +71,17 @@ function showDetails(id) {
         else if (data.criancasId.faixa_etaria == 4) {
             idade = "12-18";
         }
+
         document.getElementById("idadeDenuncia").setAttribute("value", idade);
-        document.getElementById("sexoDenuncia").setAttribute("value", data.criancasId.sexo);
+
+        let genero;
+        if (data.criancasId.sexo == "male") {
+                genero = "Masculino";
+        }
+        else if (data.criancasId.sexo == "female") {
+                genero = "Feminino";
+        }
+        document.getElementById("sexoDenuncia").setAttribute("value", genero);
 
 
         document.href = "#detalhes-denuncias";

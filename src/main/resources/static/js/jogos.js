@@ -171,7 +171,9 @@ function showJogos() {
                     <p class="item-intro text-muted paragrafo">
                     ${jogos[i].descricao}
                     </p>
-                    ${video} 
+                    <div class="iframe-container">
+                    ${video}
+                    </div>
                     <br>
                     <p class="item-intro text-muted paragrafo">
                     Instruções:
