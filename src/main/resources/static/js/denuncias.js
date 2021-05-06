@@ -139,7 +139,9 @@ function saveDenuncia() {
                     icon: "success",
                     title: "Sucesso",
                     text: "Denúncia inserida com sucesso"
-                });
+                }).then(function () {
+                                window.location.href = "/menuLinhasPolicia";
+                              });
             }
         })
         .then(result => console.log(result))
