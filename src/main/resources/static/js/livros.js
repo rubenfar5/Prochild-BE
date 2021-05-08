@@ -13,11 +13,12 @@ window.addEventListener("load", function () {
 });
 window.addEventListener("load", function () {
   document.getElementById("filePdf").onchange = function (event) {
+
     var reader = new FileReader();
     reader.readAsDataURL(event.srcElement.files[0]);
     var me = this;
     reader.onload = function () {
-      pdfFile = reader.result;
+         pdfFile = reader.result;
     }
   }
 });
@@ -101,10 +102,36 @@ function fetchLivros() {
 
 fetchLivros();
 
+function openLivro(l){
+console.log("aqui");
+window.open(l);
+}
+
 function showLivros() {
   let table = ``;
   let model = ``;
   for (i = 0; i < livros.length; i++) {
+    //convert base64 to raw binary data held in a string
+          // doesn't handle URLEncoded DataURIs - see SO answer #6850276 for code that does this
+          var byteString = atob(livros[i].link.split(',')[1]);
+
+          // separate out the mime component
+          var mimeString = livros[i].link.split(',')[0].split(':')[1].split(';')[0];
+
+          // write the bytes of the string to an ArrayBuffer
+          var ab = new ArrayBuffer(byteString.length);
+
+          // create a view into the buffer
+          var ia = new Uint8Array(ab);
+
+          // set the bytes of the buffer to the correct values
+          for (var e = 0; e < byteString.length; e++) {
+              ia[e] = byteString.charCodeAt(e);
+          }
+
+          // write the ArrayBuffer to a blob, and you're done
+          var blob = new Blob([ab], {type: mimeString});
+          let link = window.URL.createObjectURL(blob);
 
     table = table + `<div class="col-lg-4 col-sm-6 mb-4">
     <div class="portfolio-item" align="center">
@@ -123,9 +150,9 @@ function showLivros() {
     </div>
   </div>`;
 
-    let video = ``
+    let video = ``;
     if (livros[i].video !== null) {
-      video = video + `<iframe width="560" height="315" src="https://www.youtube.com/embed/${livros[i].video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+      video = video + `<iframe width="560" height="315" src="https://www.youtube.com/embed/${livros[i].video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
     }
     else {
       video = video + `<div>
@@ -154,17 +181,23 @@ function showLivros() {
                  ${video}
                 </div>
                 <br>
-                <div align="center">
-                <iframe src="${livros[i].link}" width="800px" height="700px" frameborder="0"></iframe>
-                </div>
                 <p></p>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
-                  <i class="fas fa-times mr-1"></i>
-                  Fechar
-                </button>
+                <br>
               </div>
+              <div align="center">
+              <button class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" type="button" onclick="openLivro('${link}');"><i class="fas fa-book-open"></i>
+                Abrir livro
+              </button>
+              </div>
+              <br>
             </div>
           </div>
+        </div>
+        <div align="center">
+          <button class="btn btn-primary" data-dismiss="modal" type="button">
+            <i class="fas fa-times mr-1"></i>
+            Fechar
+          </button>
         </div>
       </div>
     </div>
