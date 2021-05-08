@@ -10,12 +10,14 @@
 	</parent>
 	<groupId>DAI</groupId>
 	<artifactId>Prochild</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<name>Prochild</name>
 	<description>Aplicação Prochild para a Unidade Curricular de DAI</description>
+
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -32,6 +34,10 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
@@ -58,6 +64,8 @@
 		</dependency>
 	</dependencies>
 
+	<packaging>jar</packaging>
+
 	<build>
 	<pluginManagement>
 		<plugins>
@@ -70,9 +78,10 @@
 				<artifactId>heroku-maven-plugin</artifactId>
 				<version>3.0.3</version>
 				<configuration>
-					<buildpacks>
-						<buildpack>heroku/jvm</buildpack>
-					</buildpacks>
+					<includeTarget>false</includeTarget>
+					<includes>
+						<include>target/Prochild-1.0-SNAPSHOT.jar</include>
+					</includes>
 				</configuration>
 			</plugin>
 		</plugins>
