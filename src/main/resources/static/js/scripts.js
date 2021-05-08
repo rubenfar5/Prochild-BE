@@ -114,7 +114,7 @@ function clearLocalStorage() {
 function changeMainMenu() {
 
     if (localStorage.getItem("type") == "Child") {
-        if (localStorage.getItem("age") === "1" || localStorage.getItem("age") === "2") {
+        if (localStorage.getItem("age") === "1" || localStorage.getItem("age") === "2" || localStorage.getItem("age") === "3") {
             document.getElementById("forumbtn").remove();
             document.getElementById("direitosbtn").setAttribute("href", "menuDireitosCriancas");
         }
