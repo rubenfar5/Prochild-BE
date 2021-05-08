@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @CrossOrigin(maxAge = 3600)
 @Controller
-@RequestMapping("https://happychildpc.herokuapp.com/")
+@RequestMapping("/")
 public class MappingSite {
 
     @GetMapping("menuEscolherPerfil")

@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Prochild {
+public class ProchildApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Prochild.class, args);
+		SpringApplication.run(ProchildApplication.class, args);
 	}
 
 }
