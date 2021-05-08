@@ -114,15 +114,15 @@ function clearLocalStorage() {
 function changeMainMenu() {
 
     if (localStorage.getItem("type") == "Child") {
-            if (localStorage.getItem("age") === "1"  localStorage.getItem("age") === "2") {
-                document.getElementById("forumbtn").remove();
-                if(localStorage.getItem("age") === "1"  localStorage.getItem("age") === "2" || localStorage.getItem("age") === "3"){
-                    document.getElementById("direitosbtn").setAttribute("href", "menuDireitosCriancas");
-                }
-            }
-            document.getElementById("perfilbtn").remove();
-            document.getElementById("apoiosplace").innerHTML = '<a class="nav-link js-scroll-trigger" href="menuSelecaoTipoInformacao"><i class="far fa-question-circle"></i> Ajudas</a>';
-        }
+      if (localStorage.getItem("age") === "1" || localStorage.getItem("age") === "2") {
+        document.getElementById("forumbtn").remove();
+      }
+      if(localStorage.getItem("age") === "1" || localStorage.getItem("age") === "2" || localStorage.getItem("age") === "3"){
+          document.getElementById("direitosbtn").setAttribute("href", "menuDireitosCriancas");
+      }
+      document.getElementById("perfilbtn").remove();
+      document.getElementById("apoiosplace").innerHTML = '<a class="nav-link js-scroll-trigger" href="menuSelecaoTipoInformacao"><i class="far fa-question-circle"></i> Ajudas</a>';
+    }
     else if (localStorage.getItem("function") == "security") {
         document.getElementById("apoiosplace").innerHTML = '<a class="nav-link js-scroll-trigger" href="menuVerDenuncias"><i class="fas fa-shield-alt"></i> Denúncias</a>';
     }
