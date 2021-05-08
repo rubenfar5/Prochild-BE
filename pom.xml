@@ -70,10 +70,6 @@
 	<pluginManagement>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
@@ -85,20 +81,6 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>com.heroku.sdk</groupId>
-				<artifactId>heroku-maven-plugin</artifactId>
-				<configuration>
-					<appName> happychildpc </appName>
-					<includeTarget>false</includeTarget>
-					<includes>
-						<include>target/Prochild-1.0-SNAPSHOT.jar</include>
-					</includes>
-					<processTypes>
-						<web>java $JAVA_OPTS -cp target/classes;target/dependency/* Prochild</web>
-					</processTypes>
-				</configuration>
 			</plugin>
 		</plugins>
 	</pluginManagement>
