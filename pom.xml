@@ -96,7 +96,7 @@
 						<include>target/Prochild-1.0-SNAPSHOT.jar</include>
 					</includes>
 					<processTypes>
-						<web>java -jar target/Prochild-1.0-SNAPSHOT.jar</web>
+						<web>java $JAVA_OPTS -cp target/classes;target/dependency/* Prochild</web>
 					</processTypes>
 				</configuration>
 			</plugin>
