@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes/* ProchildApplication
+web: java $JAVA_OPTS -cp target/classes/DAI/Prochild/ProchildApplication
