@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes;target/dependency/* DAI.Prochild.Prochild
+web: java $JAVA_OPTS -cp target/classes/ DAI.Prochild.Prochild
