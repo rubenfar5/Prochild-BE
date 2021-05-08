@@ -78,10 +78,14 @@
 				<artifactId>heroku-maven-plugin</artifactId>
 				<version>3.0.3</version>
 				<configuration>
+					<appName> happychildpc </appName>
 					<includeTarget>false</includeTarget>
 					<includes>
 						<include>target/Prochild-1.0-SNAPSHOT.jar</include>
 					</includes>
+					<processTypes>
+						<web>java -jar target/Prochild-1.0-SNAPSHOT.jar</web>
+					</processTypes>
 				</configuration>
 			</plugin>
 		</plugins>
