@@ -86,7 +86,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>DAI.Prochild.ProchildApplication</mainClass>
+							<mainClass>target.classes.DAI.Prochild.ProchildApplication</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
