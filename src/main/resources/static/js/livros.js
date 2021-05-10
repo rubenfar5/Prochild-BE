@@ -174,6 +174,7 @@ function showLivros() {
             <div class="col-lg-8">
               <div class="modal-body row justify-content-center">
                 <h2 class="text-uppercase">${livros[i].nome}</h2>
+                <br>
                 <p class="item-intro text-muted">
                   ${livros[i].descricao}
                 </p>
