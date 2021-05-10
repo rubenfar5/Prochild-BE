@@ -32,7 +32,7 @@ public class LivrosController {
 
     @GetMapping(path = "/capa/{livrosId}")
     public String getOneCapa(@PathVariable ("livrosId") Long livrosId) {
-        var livro = livrosService.getOneCapa(livrosId);
+        Livros livro = livrosService.getOneCapa(livrosId);
         return livro.getCapa();
     }
 

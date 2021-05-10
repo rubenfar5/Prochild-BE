@@ -29,7 +29,7 @@ public class JogosController {
 
     @GetMapping(path = "/imagem/{jogosID}")
     public String getOneImagem(@PathVariable ("jogosID") Long jogosID) {
-        var jogo = jogosService.getOneImagem(jogosID);
+        Jogos jogo = jogosService.getOneImagem(jogosID);
         return jogo.getImagem();
     }
 

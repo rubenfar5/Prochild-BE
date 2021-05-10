@@ -28,7 +28,7 @@ public class LinhasApoioController {
 
     @GetMapping(path = "/imagem/{linhasId}")
     public String getOneCapa(@PathVariable ("linhasId") Long linhasId) {
-        var linha = linhasApoioService.getOneImagem(linhasId);
+        LinhasApoio linha = linhasApoioService.getOneImagem(linhasId);
         return linha.getImagem();
     }
 
