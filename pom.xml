@@ -78,6 +78,7 @@
 					<includes>
 						<include>target/Prochild-1.0-SNAPSHOT.jar</include>
 					</includes>
+
 				</configuration>
 			</plugin>
 			<plugin>
@@ -86,7 +87,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>target.classes.DAI.Prochild.ProchildApplication</mainClass>
+							<mainClass>DAI.Prochild.ProchildApplication</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
