@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes/:target/dependency/* DAI.Prochild.ProchildApplication
+web: java $JAVA_OPTS -cp target/classes/:target/dependency/* Prochild-1.0-SNAPSHOT.jar
